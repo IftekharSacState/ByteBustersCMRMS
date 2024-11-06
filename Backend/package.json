@@ -1,0 +1,22 @@
+{
+  "name": "bytebusterscmrms",
+  "version": "1.0.0",
+  "description": "# For CSC 131",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IftekharSacState/ByteBustersCMRMS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IftekharSacState/ByteBustersCMRMS/issues"
+  },
+  "homepage": "https://github.com/IftekharSacState/ByteBustersCMRMS#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
