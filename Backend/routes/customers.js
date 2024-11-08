@@ -10,6 +10,14 @@ router.get("/", (req, res) => {
   });
 });
 
+// Get all customers that is named David
+router.get("/Davids", (req, res) => {
+  db.query("SELECT * FROM Customers WHERE name = 'David' ", (err, results) => {
+    if (err) return res.status(500).json({ error: err });
+    res.json(results);
+  });
+});
+
 // Create a new customer
 router.post("/", (req, res) => {
   const { name, email, phoneNumber } = req.body;
@@ -23,5 +31,7 @@ router.post("/", (req, res) => {
     }
   );
 });
+
+// List of all the customers with active services
 
 module.exports = router;
