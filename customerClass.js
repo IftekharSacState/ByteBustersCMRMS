@@ -1,10 +1,11 @@
 // customer class by sui
 
 class Customer extends User {
-    #customerID
+    
 
-    #phoneNumber
-
-    #ownedVehicles
-
+    constructor() {
+        this.customerID = 
+        this.phoneNumber = 
+        this.vehicles;
+    }
 }
