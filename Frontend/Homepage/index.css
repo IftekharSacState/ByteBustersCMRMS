@@ -618,7 +618,7 @@ button {
   background-size: cover;
   z-index: 60;
 }
-.guarantee-c {
+/* .guarantee-c {
   position: absolute;
   width: 64px;
   height: 64px;
@@ -628,7 +628,7 @@ button {
     no-repeat center;
   background-size: cover;
   z-index: 10;
-}
+} */
 .certified {
   position: absolute;
   width: 64px;
@@ -640,7 +640,7 @@ button {
   background-size: cover;
   z-index: 64;
 }
-.certified-d {
+/* .certified-d {
   position: absolute;
   width: 64px;
   height: 64px;
@@ -650,7 +650,7 @@ button {
     no-repeat center;
   background-size: cover;
   z-index: 14;
-}
+} */
 .best-prices {
   display: flex;
   align-items: flex-start;
@@ -698,7 +698,7 @@ button {
   background-size: cover;
   z-index: 56;
 }
-.best-prices-10 {
+/* .best-prices-10 {
   position: absolute;
   width: 64px;
   height: 64px;
@@ -708,7 +708,7 @@ button {
     no-repeat center;
   background-size: cover;
   z-index: 6;
-}
+} */
 .qualified-trained {
   display: flex;
   align-items: flex-start;
