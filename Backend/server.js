@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
+const cors = require("cors"); // Import CORS
 const db = require("./db.js");
 
 // Load environment variables
@@ -8,6 +9,12 @@ dotenv.config();
 
 // Initialize app
 const app = express();
+
+// Enable CORS
+app.use(cors()); // Allows requests from all origins
+// To restrict origins, you can configure cors like:
+// app.use(cors({ origin: "http://specific-origin.com" }));
+
 app.use(bodyParser.json());
 
 // Import routes
