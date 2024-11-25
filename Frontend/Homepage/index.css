@@ -1,8 +1,8 @@
 :root {
   --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-    "Source Han Sans CN", sans-serif;
+  Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+  "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+  "Source Han Sans CN", sans-serif;
 }
 
 .main-container {
@@ -36,7 +36,7 @@ button {
   height: 273px;
   margin: -62px 0 0 -44px;
   background: url(assets/images/66de12095a11e38332c62d04c7c1cc82e8307385.png)
-    no-repeat center;
+  no-repeat center;
   background-size: cover;
 }
 .car-maintenance-system {
@@ -96,7 +96,7 @@ button {
   top: 0;
   left: 0;
   background: url(assets/images/49d0a19142f8f4e180831d9a34d60ccc23427556.png)
-    no-repeat center;
+  no-repeat center;
   background-size: cover;
   z-index: 50;
 }
@@ -354,7 +354,7 @@ button {
   top: 0;
   left: 0;
   background: url(assets/images/86975030-70bb-41d4-ab9f-48577ef6c214.png)
-    no-repeat center;
+  no-repeat center;
   background-size: cover;
   z-index: 25;
 }
@@ -479,7 +479,7 @@ button {
   top: 7px;
   left: 0;
   background: url(assets/images/ebbb30331fe88087a5266028d052da234642c149.png)
-    no-repeat center;
+  no-repeat center;
   background-size: cover;
   z-index: 43;
 }
@@ -558,7 +558,7 @@ button {
   top: 624px;
   left: -625px;
   background: url(assets/images/ebbb30331fe88087a5266028d052da234642c149.png)
-    no-repeat center;
+  no-repeat center;
   background-size: cover;
   z-index: 21;
 }
@@ -614,7 +614,7 @@ button {
   top: 0;
   left: 413px;
   background: url(assets/images/7733e7bd1bfa28654f21d8d9e69f013077185c2c.png)
-    no-repeat center;
+  no-repeat center;
   background-size: cover;
   z-index: 60;
 }
@@ -636,7 +636,7 @@ button {
   top: 0;
   left: 792px;
   background: url(assets/images/60970361bca82244039da3c1effa3bff16a3a145.png)
-    no-repeat center;
+  no-repeat center;
   background-size: cover;
   z-index: 64;
 }
@@ -694,7 +694,7 @@ button {
   top: 2px;
   left: 0;
   background: url(assets/images/9bedff0b6b18cdb999b54a7e1fb54928134da260.png)
-    no-repeat center;
+  no-repeat center;
   background-size: cover;
   z-index: 56;
 }
