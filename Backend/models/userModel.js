@@ -1,14 +1,21 @@
 const db = require("../db");
 
-class Customer {
-  static getAllCustomers(callback) {
-    db.query("SELECT * FROM Customers", (err, results) => {
-      if (err) return callback(err);
-      callback(null, results);
-    });
+class User {
+  static Login(username, password) {
+    db.query(
+      "SELECT * FROM User WHERE username = '" +
+        username +
+        "' AND password = '" +
+        password +
+        "'",
+      (err, results) => {
+        if (results.length == 1) return true;
+        else return false;
+      }
+    );
   }
 
-  static createCustomer(newCustomer, callback) {
+  static Register(newCustomer, callback) {
     const { name, email, phone, password } = newCustomer;
     db.query(
       "INSERT INTO Customers (name, email, phone, password) VALUES (?, ?, ?, ?)",
