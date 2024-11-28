@@ -21,13 +21,13 @@ app.use(bodyParser.json());
 
 // Import routes
 const userRoutes = require("./routes/userRoute.js");
-//const customerRoutes = require("./routes/customersRoute.js");
+const customerRoutes = require("./routes/customersRoute.js");
 const mechanicRoutes = require("./routes/mechanics.js");
 const appointmentRoutes = require("./routes/appointments.js");
 const feedbackRoutes = require("./routes/feedbacks.js");
 
 // Use routes
-//app.use("/customers", customerRoutes);
+app.use("/customers", customerRoutes);
 app.use("/mechanics", mechanicRoutes);
 app.use("/appointments", appointmentRoutes);
 app.use("/feedbacks", feedbackRoutes);
