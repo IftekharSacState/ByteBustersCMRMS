@@ -12,27 +12,27 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   registerButton.addEventListener("click", () => {
-    alert("Register button clicked");
+    window.location.href = "../signup/index.html";
     // Add your register logic here
   });
 
   faqButton.addEventListener("click", () => {
-    alert("FAQ button clicked");
+    window.location.href = "../faq/index.html";
     // Add your FAQ logic here
   });
 
   contactButton.addEventListener("click", () => {
-    alert("Contact button clicked");
+    window.location.href = "../contact/index.html";
     // Add your contact logic here
   });
 
   servicesButton.addEventListener("click", () => {
-    alert("Services button clicked");
+    window.location.href = "../service+/index.html";
     // Add your services logic here
   });
 
   aboutButton.addEventListener("click", () => {
-    alert("About button clicked");
+    window.location.href = "../about/index.html";
     // Add your about logic here
   });
 });
