@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
 const cors = require("cors"); // Import CORS
-const db = require("./db.js");
+const db = require("./config/db.js");
 
 // Load environment variables
 dotenv.config();
@@ -18,10 +18,10 @@ app.use(cors()); // Allows requests from all origins
 app.use(bodyParser.json());
 
 // Import routes
-const customerRoutes = require("./routes/customers");
-const mechanicRoutes = require("./routes/mechanics");
-const appointmentRoutes = require("./routes/appointments");
-const feedbackRoutes = require("./routes/feedbacks");
+const customerRoutes = require("./routes/customers.js");
+const mechanicRoutes = require("./routes/mechanics.js");
+const appointmentRoutes = require("./routes/appointments.js");
+const feedbackRoutes = require("./routes/feedbacks.js");
 
 // Use routes
 app.use("/customers", customerRoutes);
