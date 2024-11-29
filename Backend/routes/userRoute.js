@@ -33,4 +33,39 @@ router.post("/login", async (req, res) => {
   }
 });
 
+// Register Route
+router.post("/register", async (req, res) => {
+  const { username, password, name, email } = req.body;
+
+  try {
+    // Check if username already exists
+    const [results] = await db
+      .promise()
+      .query("SELECT * FROM Users WHERE username = ?", [username]);
+
+    if (results.length > 0) {
+      return res
+        .status(400)
+        .json({ success: false, message: "Username already exists" });
+    }
+
+    // Insert the new user into the database
+    await db
+      .promise()
+      .query("INSERT INTO Users (username, password, name, email) VALUES (?, ?, ?, ?)", [
+        username,
+        password,
+        name,
+        email,
+      ]);
+
+    // Registration successful
+    return res.status(201).json({ success: true, message: "Registration successful" });
+
+  } catch (err) {
+    console.error("Database error:", err.message);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+});
+
 module.exports = router;

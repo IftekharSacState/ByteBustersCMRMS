@@ -17,7 +17,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Serve static files from the Frontend directory
-//app.use(express.static(path.join(__dirname, "../Frontend/")));
+app.use(express.static(path.join(__dirname, "../Frontend/")));
 
 // Import routes
 const userRoutes = require("./routes/userRoute.js");
@@ -34,9 +34,9 @@ app.use("/feedbacks", feedbackRoutes);
 app.use("/users", userRoutes);
 
 // Serve the homepage
-// app.get("/", (req, res) => {
-//   res.sendFile(path.join(__dirname, "../Frontend/Homepage/index.html"));
-// });
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../Frontend/Homepage/index.html"));
+});
 
 // Start server
 const PORT = process.env.PORT || 3000;
