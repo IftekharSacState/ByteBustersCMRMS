@@ -87,7 +87,7 @@ button {
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
 }
-.title-about {
+.about {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -120,7 +120,7 @@ button {
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
 }
-.title-home {
+.home {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -153,7 +153,7 @@ button {
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
 }
-.contact-title {
+.contact {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -186,7 +186,7 @@ button {
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
 }
-.faq-title {
+.faq {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;

@@ -81,7 +81,7 @@ button {
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
 }
-.title {
+.about {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -114,7 +114,7 @@ button {
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
 }
-.title-2 {
+.home {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -147,7 +147,7 @@ button {
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
 }
-.title-4 {
+.faq {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -161,6 +161,22 @@ button {
   white-space: nowrap;
   z-index: 64;
 }
+
+.contact {
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  height: 16px;
+  color: #1e1e1e;
+  font-family: Inter, var(--default-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 64;
+}
+
 .navigation-pill-5 {
   display: flex;
   align-items: center;
@@ -213,7 +229,7 @@ button {
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
 }
-.services-title {
+.services-plus {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
