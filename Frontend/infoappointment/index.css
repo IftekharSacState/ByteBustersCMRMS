@@ -467,7 +467,7 @@ button {
 .navigation-pill-5:hover,
 .navigation-pill-7:hover,
 .confirm-appointment:hover {
-  background-color: #1e5dbc; /* Change background color */
+  background-color: #007AFF; /* Change background color */
   color: #fff; /* Change text color */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
 }

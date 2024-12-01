@@ -886,7 +886,7 @@ button {
 
 /* Make Appointment Button Hover Effect */
 .make-appointment:hover {
-  background-color: #1e5dbc; /* Change background color on hover */
+  background-color: #007AFF; /* Change background color on hover */
   color: #fff; /* Change text color */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
 }

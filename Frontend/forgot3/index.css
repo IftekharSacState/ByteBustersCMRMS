@@ -112,6 +112,7 @@ button {
   z-index: 21;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .contact {
   flex-shrink: 0;
@@ -145,6 +146,7 @@ button {
   z-index: 23;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .faq {
   flex-shrink: 0;
@@ -178,6 +180,7 @@ button {
   z-index: 25;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .services-plus {
   flex-shrink: 0;
@@ -211,6 +214,7 @@ button {
   z-index: 17;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .about {
   flex-shrink: 0;
@@ -244,6 +248,7 @@ button {
   z-index: 19;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .home {
   flex-shrink: 0;
@@ -365,11 +370,15 @@ button {
   justify-content: center;
   flex-wrap: nowrap;
   gap: 10px;
-  position: relative;
-  width: 374px;
-  margin: 0 0 0 96px;
-  padding: 10px 10px 10px 10px;
-  z-index: 13;
+  position: absolute;
+  width: 580px;
+  height: 60px;
+  top: 1px;
+  nav-down:10;
+  padding: 20px 20 px;
+  z-index: 10;
+  border-radius: 8px; 
+  transition: all 0.2s ease-in-out;
 }
 .change-pass {
   flex-shrink: 0;
@@ -452,4 +461,19 @@ button {
     no-repeat center;
   background-size: cover;
   z-index: 15;
+}
+.navigation-pill:hover,
+.nav-pill:hover,
+.nav-pill-2:hover,
+.nav-pill-3:hover,
+.nav-pill-4:hover {
+  background-color: #007AFF; /* Change background color */
+  color: #fff; /* Change text color */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
+}
+
+.frame-7:hover{
+  background-color: #1e5dbc; /* Change background color */
+  color: #fff; /* Change text color */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
 }
