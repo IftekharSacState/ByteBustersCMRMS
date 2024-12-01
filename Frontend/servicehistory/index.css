@@ -325,7 +325,7 @@ button {
   z-index: 5;
   border-radius: 8px;
 }
-.title {
+.home {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
