@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const aboutButton = document.querySelector(".about");
     const loginButton = document.querySelector(".login-button"); 
     const registerButton = document.querySelector(".button"); 
+    const resetPasswordLink = document.querySelector(".here");
 
     // signInButton.addEventListener("click", () => {
     //   window.location.href = "../login/index.html";
@@ -44,5 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
     registerButton.addEventListener("click", () => {
       // Redirect to register.html
       window.location.href = "../signup/index.html";
+    });
+    resetPasswordLink.addEventListener("click", () => {
+      // Redirect to password reset page
+      window.location.href = "../forgotpass/index.html"; 
     });
   });

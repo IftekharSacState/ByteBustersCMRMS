@@ -540,12 +540,14 @@ button {
 }
 .here {
   position: relative;
-  color: #1e5dbc;
+  color: #1e5dbc;  /* Retaining your current color */
   font-family: Inter, var(--default-font-family);
   font-size: 16px;
   font-weight: 700;
   line-height: 16px;
   text-align: left;
+  text-decoration: underline;  /* Underline to make it look like a link */
+  cursor: pointer;  /* Make cursor a pointer to show it’s clickable */
 }
 .to-reset {
   position: relative;
@@ -637,4 +639,9 @@ button {
   background-color: #1e5dbc; /* Change background color */
   color: #fff; /* Change text color */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
+}
+
+.here:hover {
+  color: #1558a5;  /* Darken the color on hover */
+  text-decoration: underline;  /* Keep underline on hover */
 }
