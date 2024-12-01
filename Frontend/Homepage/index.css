@@ -878,7 +878,7 @@ button {
 .navigation-pill-4:hover,
 .button:hover,
 .button-1:hover {
-  background-color: #1e5dbc; /* Change background color */
+  background-color: #007AFF; /* Change background color */
   color: #fff; /* Change text color */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
   border: 1px solid transparent;
@@ -886,7 +886,7 @@ button {
 
 /* Make Appointment Button Hover Effect */
 .make-appointment:hover {
-  background-color: #007AFF; /* Change background color on hover */
+  background-color: #00aeff; /* Change background color on hover */
   color: #fff; /* Change text color */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
 }
