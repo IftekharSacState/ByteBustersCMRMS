@@ -295,11 +295,30 @@ button {
   width: 581px;
   height: 76px;
   margin: -10px 0 0 172px;
-  border: 1px solid #626262;
   z-index: 7;
   overflow: hidden;
+  border: 1px solid #626262; 
   border-radius: 8px;
+  background: transparent;  
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  box-shadow: none; 
 }
+
+.email-address-frame input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  color: #000000;
+  background: transparent;  
+  border: none;  
+  outline: none;
+  font-family: Inter, var(--default-font-family);
+  box-sizing: border-box;
+  text-align: left;
+}
+
 .receive-email-link {
   position: relative;
   width: 550px;

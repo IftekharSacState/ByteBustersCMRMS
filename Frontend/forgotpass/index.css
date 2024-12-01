@@ -313,6 +313,21 @@ button {
   z-index: 10;
   overflow: hidden;
   border-radius: 8px;
+  background: transparent; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.frame-8 input {
+  width: 90%; /* Adjust width as needed */
+  padding: 10px;
+  font-size: 18px;
+  color: #000000;
+  background: transparent; /* Keep transparent background */
+  border: none;
+  outline: none;
+  font-family: Inter, var(--default-font-family);
+  box-sizing: border-box;
 }
 .flex-row-edf {
   position: relative;

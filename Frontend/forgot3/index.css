@@ -309,6 +309,23 @@ button {
   z-index: 7;
   overflow: hidden;
   border-radius: 8px;
+  background: transparent;  
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  box-shadow: none; 
+}
+.change-password-5 input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  color: #000000;
+  background: transparent;  
+  border: none;  
+  outline: none;
+  font-family: Inter, var(--default-font-family);
+  box-sizing: border-box;
+  text-align: left;
 }
 .flex-row-d {
   position: relative;
@@ -355,6 +372,23 @@ button {
   z-index: 10;
   overflow: hidden;
   border-radius: 8px;
+  background: transparent;  
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  box-shadow: none; 
+}
+.repeat-password-frame input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  color: #000000;
+  background: transparent;  
+  border: none;  
+  outline: none;
+  font-family: Inter, var(--default-font-family);
+  box-sizing: border-box;
+  text-align: left;
 }
 .flex-row-b {
   position: relative;
