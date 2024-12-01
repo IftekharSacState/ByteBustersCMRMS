@@ -86,6 +86,7 @@ button {
   z-index: 30;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out
 }
 .about {
   flex-shrink: 0;
@@ -119,6 +120,7 @@ button {
   z-index: 32;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out
 }
 .home {
   flex-shrink: 0;
@@ -152,6 +154,7 @@ button {
   z-index: 34;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out
 }
 .contact {
   flex-shrink: 0;
@@ -185,6 +188,7 @@ button {
   z-index: 36;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out
 }
 .faq {
   flex-shrink: 0;
@@ -218,6 +222,7 @@ button {
   z-index: 38;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out
 }
 .services-plus {
   flex-shrink: 0;
@@ -493,6 +498,7 @@ button {
   background: rgba(30, 93, 188, 0.2);
   border: none;
   z-index: 22;
+  transition: all 0.2s ease-in-out
 }
 .login-a {
   flex-shrink: 0;
@@ -600,6 +606,7 @@ button {
   border: 1px solid #2c2c2c;
   z-index: 28;
   overflow: hidden;
+  transition: all 0.2s ease-in-out
 }
 .register-new-account {
   flex-shrink: 0;
@@ -615,3 +622,15 @@ button {
   white-space: nowrap;
   z-index: 29;
 }
+.navigation-pill:hover,
+.navigation-pill-1:hover,
+.navigation-pill-2:hover,
+.navigation-pill-3:hover,
+.navigation-pill-4:hover,
+.login-button:hover,
+.button:hover {
+  background-color: #1e5dbc; /* Change background color */
+  color: #fff; /* Change text color */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
+}
+
