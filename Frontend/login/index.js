@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const aboutButton = document.querySelector(".about");
     const loginButton = document.querySelector(".login-button"); 
     const registerButton = document.querySelector(".button"); 
-    const resetPasswordLink = document.querySelector(".here");
+    const resetPasswordLink = document.querySelector(".here"); /*Forgot Pass */
+    const employeeLink = document.querySelector(".here-b"); /* Employee Login */
 
     // signInButton.addEventListener("click", () => {
     //   window.location.href = "../login/index.html";
@@ -49,5 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
     resetPasswordLink.addEventListener("click", () => {
       // Redirect to password reset page
       window.location.href = "../forgotpass/index.html"; 
+    });
+    employeeLink.addEventListener("click", () => {
+      // Redirect to the employee login page
+      window.location.href = "../employeelogin/index.html";
     });
   });

@@ -590,6 +590,8 @@ button {
   font-weight: 700;
   line-height: 16px;
   text-align: left;
+  text-decoration: underline;  
+  cursor: pointer;  
 }
 .button {
   display: flex;
@@ -641,7 +643,10 @@ button {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
 }
 
-.here:hover {
+/*Forgot Password & Employee Login*/
+.here:hover,
+.here-b { 
   color: #1558a5;  /* Darken the color on hover */
   text-decoration: underline;  /* Keep underline on hover */
 }
+
