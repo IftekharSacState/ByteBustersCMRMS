@@ -354,6 +354,7 @@ button {
   border: none;
   z-index: 11;
   outline: none;
+  padding-left: 55px;
 }
 .user-solid {
   position: absolute;
@@ -431,6 +432,7 @@ button {
   border: none;
   z-index: 18;
   outline: none;
+  padding-left:55px;
 }
 .lock-solid {
   position: absolute;
