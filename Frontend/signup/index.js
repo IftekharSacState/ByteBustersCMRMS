@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // const signInButton = document.querySelector(".sign-in");
+    const loginButton = document.querySelector(".login");
     const homeButton = document.querySelector(".home");
     const faqButton = document.querySelector(".faq");
     const contactButton = document.querySelector(".contact");
     const servicesButton = document.querySelector(".services-plus");
     const aboutButton = document.querySelector(".about");
   
-    // signInButton.addEventListener("click", () => {
-    //   window.location.href = "../login/index.html";
-    //   // Add your sign-in logic here
-    // });
+    loginButton.addEventListener("click", () => {
+      window.location.href = "../login/index.html";
+      // Add your sign-in logic here
+    });
   
     homeButton.addEventListener("click", () => {
       window.location.href = "../Homepage/index.html";
