@@ -1518,6 +1518,7 @@ button {
   position: relative;
   min-width: 0;
   z-index: 173;
+  height: 40px;
 }
 .cells-44 {
   align-self: stretch;
