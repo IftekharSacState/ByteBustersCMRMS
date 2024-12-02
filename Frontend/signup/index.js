@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     loginButton.addEventListener("click", () => {
         // Redirect to the login page
-        window.location.href = "your-login-page.html"; // Replace with your actual login page URL
+        window.location.href = "your-login-page.html"; 
     });
 });
 
