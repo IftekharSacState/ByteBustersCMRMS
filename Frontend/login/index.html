@@ -4,11 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <script src="index.js"></script>
     <div class="main-container">
       <div class="pngwing-com"></div>
       <div class="frame">
@@ -32,31 +34,80 @@
         <span class="sign-in-account">Sign in to your account</span
         ><span class="find-service-today">Find your service<br />today!</span>
         <div class="user-frame">
-          <input type="text" id="username" class="user-frame-input" placeholder="" />
+          <input
+            type="text"
+            id="username_input"
+            class="user-frame-input"
+            placeholder="Username"
+          />
           <div class="user-solid"><div class="vector"></div></div>
-          <span class="username">Username</span>
         </div>
         <div class="user-frame-underline"></div>
         <div class="password-frame">
           <div class="password-frame-underline"></div>
-          <input type="password" id="password" class="password-frame-input" placeholder="" />
+          <input
+            type="password"
+            id="password_input"
+            class="password-frame-input"
+            placeholder="password"
+          />
           <div class="lock-solid"><div class="vector-8"></div></div>
           <div class="password"></div>
-          <span class="password-9">Password</span>
         </div>
-        <button class="login-button"><span class="login-a">Login</span></button>
+        <button class="login-button" id="login-button">
+          <span class="login-a">Login</span>
+        </button>
         <div class="forgot-password-link">
-          <span class="forgot-password-click">I forgot my password. Click </span>
+          <span class="forgot-password-click"
+            >I forgot my password. Click
+          </span>
           <span class="here">here</span>
           <span class="to-reset"> to reset</span>
-        </div>        
-        <div class="employee-click-here">
-          <span class="employee-click">Employee? Click </span><span class="here-b">here</span>
         </div>
-        <button class="button">
-          <span class="register-new-account">Register New Account</span>
-        </button>
+        <div class="employee-click-here">
+          <span class="employee-click">Employee? Click </span
+          ><span class="here-b">here</span>
+        </div>
+        <a href="../signup/index.html">
+          <button class="button">
+            <span class="register-new-account">Register New Account</span>
+          </button>
+        </a>
       </div>
     </div>
   </body>
+
+  <script>
+    // The login function defined here
+    async function login(event) {
+      event.preventDefault(); // Prevent the form from submitting the default way
+      const username = document.getElementById("username_input").value;
+      const password = document.getElementById("password_input").value;
+      try {
+        const response = await fetch("http://localhost:3000/users/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ username, password }),
+        });
+
+        // Handle the response from the server
+        const data = await response.json();
+
+        if (response.ok) {
+          window.location.href = "../custdash/index.html"; // "Login successful"
+        } else {
+          alert(data.message || "Invalid username or password"); // "Invalid username or password"
+        }
+      } catch (error) {
+        console.error("Error during login:", error);
+        alert(
+          "An error occurred while trying to log in. Please try again later."
+        );
+      }
+    }
+
+    document.getElementById("login-button").addEventListener("click", login);
+  </script>
 </html>

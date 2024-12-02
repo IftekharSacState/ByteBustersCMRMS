@@ -52,16 +52,15 @@ router.post("/register", async (req, res) => {
     // Insert the new user into the database
     await db
       .promise()
-      .query("INSERT INTO Users (username, password, name, email) VALUES (?, ?, ?, ?)", [
-        username,
-        password,
-        name,
-        email,
-      ]);
+      .query(
+        "INSERT INTO Users (username, password, name, email) VALUES (?, ?, ?, ?)",
+        [username, password, name, email]
+      );
 
     // Registration successful
-    return res.status(201).json({ success: true, message: "Registration successful" });
-
+    return res
+      .status(201)
+      .json({ success: true, message: "Registration successful" });
   } catch (err) {
     console.error("Database error:", err.message);
     return res.status(500).json({ error: "Internal server error" });
