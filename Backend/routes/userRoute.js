@@ -43,32 +43,22 @@ router.post("/login", async (req, res) => {
 
 // Register Route
 router.post("/register", async (req, res) => {
-  const { username, password, name, email } = req.body;
-
+  const { username, password, firstname, lastname, email } = req.body;
+  console.log(req.body);
   try {
-    // Check if username already exists
+    // Check if the username and password exist in the database
     const [results] = await db
       .promise()
-      .query("SELECT * FROM Users WHERE username = ?", [username]);
-
-    if (results.length > 0) {
-      return res
-        .status(400)
-        .json({ success: false, message: "Username already exists" });
-    }
-
-    // Insert the new user into the database
-    await db
-      .promise()
       .query(
-        "INSERT INTO Users (username, password, name, email) VALUES (?, ?, ?, ?)",
-        [username, password, name, email]
+        "INSERT INTO Users(username, password, name, email) VALUES(?, ?, ?, ?)",
+        [username, password, firstname + " " + lastname, email]
       );
 
-    // Registration successful
-    return res
-      .status(201)
-      .json({ success: true, message: "Registration successful" });
+    // Login successful - return user data
+    return res.status(200).json({
+      success: true,
+      message: "Registration successful",
+    });
   } catch (err) {
     console.error("Database error:", err.message);
     return res.status(500).json({ error: "Internal server error" });
