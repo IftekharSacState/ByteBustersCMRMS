@@ -83,6 +83,7 @@
       event.preventDefault(); // Prevent the form from submitting the default way
       const username = document.getElementById("username_input").value;
       const password = document.getElementById("password_input").value;
+
       try {
         const response = await fetch("http://localhost:3000/users/login", {
           method: "POST",
@@ -96,7 +97,11 @@
         const data = await response.json();
 
         if (response.ok) {
-          window.location.href = "../custdash/index.html"; // "Login successful"
+          // Store the user's data in localStorage
+          localStorage.setItem("user", JSON.stringify({ username }));
+
+          // Redirect to the dashboard
+          window.location.href = "../custdash/index.html"; // Adjust the path to your dashboard
         } else {
           alert(data.message || "Invalid username or password"); // "Invalid username or password"
         }
@@ -108,6 +113,24 @@
       }
     }
 
+    // Attach the login function to the button click
     document.getElementById("login-button").addEventListener("click", login);
+
+    // Example function to retrieve logged-in user data
+    function getLoggedInUser() {
+      const user = JSON.parse(localStorage.getItem("user"));
+      if (user) {
+        console.log(`Logged in as: ${user.username}`);
+      } else {
+        console.log("No user is logged in.");
+      }
+    }
+
+    // Example function to log out
+    function logout() {
+      localStorage.removeItem("user");
+      alert("You have been logged out.");
+      window.location.href = "../login/index.html"; // Redirect to the login page
+    }
   </script>
 </html>
