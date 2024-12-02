@@ -61,7 +61,7 @@
           <span class="forgot-password-click"
             >I forgot my password. Click
           </span>
-          <a href="../forgotpass/index.html" >
+          <a href="../forgotpass/index.html">
             <span class="here">here</span>
           </a>
           <span class="to-reset"> to reset</span>
@@ -103,7 +103,13 @@
         if (response.ok) {
           // Store the user's data in localStorage
           localStorage.setItem("user", JSON.stringify({ username }));
-
+          if (data.user.userType == "Customer") {
+            alert("YOU ARE A CUSTOMER");
+          } else if (data.user.userType == "Mechanic") {
+            alert("YOU ARE A MECHANIC");
+          } else if (data.user.userType == "Manager") {
+            alert("YOU ARE A MANAGER");
+          }
           // Redirect to the dashboard
           window.location.href = "../custdash/index.html"; // Adjust the path to your dashboard
         } else {
