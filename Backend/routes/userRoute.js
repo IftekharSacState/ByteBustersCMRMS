@@ -4,19 +4,16 @@ const db = require("../db"); // Assuming db.js uses mysql2 for the connection
 
 // Login Route
 router.post("/login", async (req, res) => {
-  console.log("coming from user");
   const { username, password } = req.body;
 
-  console.log(username, password);
-
   try {
-    // Check if the username exists in the database
+    // Check if the username and password exist in the database
     const [results] = await db
       .promise()
-      .query("SELECT * FROM Users WHERE username = ? AND password = ?", [
-        username,
-        password,
-      ]);
+      .query(
+        "SELECT id, username, userType FROM Users WHERE username = ? AND password = ?",
+        [username, password]
+      );
 
     // If user is not found
     if (results.length === 0) {
@@ -25,8 +22,19 @@ router.post("/login", async (req, res) => {
         .json({ success: false, message: "Invalid username or password" });
     }
 
-    // Login successful
-    return res.status(200).json({ success: true, message: "Login successful" });
+    // Extract user details
+    const user = results[0];
+
+    // Login successful - return user data
+    return res.status(200).json({
+      success: true,
+      message: "Login successful",
+      user: {
+        id: user.id,
+        username: user.username,
+        userType: user.userType, // Optional: Include user role
+      },
+    });
   } catch (err) {
     console.error("Database error:", err.message);
     return res.status(500).json({ error: "Internal server error" });

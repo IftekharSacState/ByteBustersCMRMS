@@ -475,6 +475,19 @@ button {
   z-index: 31;
   overflow: hidden;
   border-radius: 8px;
+
+}
+.password-frame-28 input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  color: #000000;
+  background: transparent;  
+  border: none;  
+  outline: none;
+  font-family: Inter, var(--default-font-family);
+  box-sizing: border-box;
+  text-align: left;
 }
 .flex-row-df {
   position: relative;
@@ -959,6 +972,23 @@ button {
   z-index: 50;
   overflow: hidden;
   border-radius: 8px;
+  background: transparent;  
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  box-shadow: none; 
+}
+.username-frame-27 input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  color: #000000;
+  background: transparent;  
+  border: none;  
+  outline: none;
+  font-family: Inter, var(--default-font-family);
+  box-sizing: border-box;
+  text-align: left;
 }
 .password-frame-28 {
   position: absolute;
@@ -970,6 +1000,11 @@ button {
   z-index: 52;
   overflow: hidden;
   border-radius: 8px;
+  background: transparent;  
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  box-shadow: none; 
 }
 .flex-row-29 {
   position: relative;
@@ -1044,6 +1079,23 @@ button {
   z-index: 53;
   overflow: hidden;
   border-radius: 8px;
+  background: transparent;  
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  box-shadow: none; 
+}
+.first-name-frame-2c input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  color: #000000;
+  background: transparent;  
+  border: none;  
+  outline: none;
+  font-family: Inter, var(--default-font-family);
+  box-sizing: border-box;
+  text-align: left;
 }
 .last-name-frame-2d {
   position: absolute;
@@ -1055,6 +1107,23 @@ button {
   z-index: 54;
   overflow: hidden;
   border-radius: 8px;
+  background: transparent;  
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  box-shadow: none; 
+}
+.last-name-frame-2d input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  color: #000000;
+  background: transparent;  
+  border: none;  
+  outline: none;
+  font-family: Inter, var(--default-font-family);
+  box-sizing: border-box;
+  text-align: left;
 }
 .flex-row-f {
   position: relative;
@@ -1101,7 +1170,25 @@ button {
   z-index: 51;
   overflow: hidden;
   border-radius: 8px;
+  background: transparent;  
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  box-shadow: none;
 }
+.email-address-frame-30 input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  color: #000000;
+  background: transparent;  
+  border: none;  
+  outline: none;
+  font-family: Inter, var(--default-font-family);
+  box-sizing: border-box;
+  text-align: left;
+}
+
 .create-account-button-31 {
   display: flex;
   align-items: center;
