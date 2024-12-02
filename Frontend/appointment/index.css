@@ -27,7 +27,7 @@ button {
   height: 1024px;
   margin: 0 auto;
   background: rgba(30, 93, 188, 0.1);
-  overflow: hidden;
+  overflow: auto;
 }
 .rectangle {
   position: absolute;
@@ -1518,6 +1518,7 @@ button {
   position: relative;
   min-width: 0;
   z-index: 173;
+  height: 40px;
 }
 .cells-44 {
   align-self: stretch;
@@ -2247,10 +2248,9 @@ button {
   align-items: flex-start;
   justify-content: flex-start;
   position: absolute;
-  width: 74.571px;
   height: 55.183px;
   top: 57.811px;
-  left: 78px;
+  left: 40px;
   color: #1e5dbc;
   font-family: DM Sans, var(--default-font-family);
   font-size: 16px;

@@ -3,11 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Customer Dashboard </title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Days+One:wght@400&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" />
+    <title>Customer Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Days+One:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap"
+    />
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
@@ -32,7 +44,7 @@
       </div>
       <div class="hello-customer">
         <span class="hello">HELLO, </span
-        ><span class="customer">Customer<br /></span>
+        ><span class="customer" id="customer_name">Customer<br /></span>
       </div>
       <button class="navigation-pill"><span class="title">Home</span></button>
       <div class="image"></div>
@@ -165,4 +177,22 @@
       </div>
     </div>
   </body>
+
+  <script>
+    function getLoggedInUser() {
+      // Retrieve user data from localStorage
+      const user = JSON.parse(localStorage.getItem("user"));
+      console.log(user);
+      if (user) {
+        // Update the element with the user's name
+        document.getElementById("customer_name").innerText = user.username;
+
+        console.log(`Logged in as: ${user.username}`);
+      } else {
+        console.log("No user is logged in.");
+      }
+    }
+
+    getLoggedInUser();
+  </script>
 </html>
