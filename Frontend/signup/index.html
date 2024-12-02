@@ -60,8 +60,7 @@
                 <span class="password-f">Password</span>
               </div>
               <div class="username-frame-10"></div>
-              <div class="password-frame-11">
-              </div>
+              <div class="password-frame-11"></div>
             </div>
             <div class="flex-row-df">
               <div class="first-name-12">
@@ -112,10 +111,20 @@
                     <span class="password-text">Password</span>
                   </div>
                   <div class="username-frame-27">
-                    <input type="email" class="input-email" placeholder="" />
+                    <input
+                      type="email"
+                      id="username_input"
+                      class="input-email"
+                      placeholder=""
+                    />
                   </div>
                   <div class="password-frame-28">
-                    <input type="password" class="input-email" placeholder="" />
+                    <input
+                      id="password_input"
+                      type="password"
+                      class="input-email"
+                      placeholder=""
+                    />
                   </div>
                 </div>
                 <div class="flex-row-29">
@@ -126,10 +135,20 @@
                     <span class="last-name-text">Last Name</span>
                   </div>
                   <div class="first-name-frame-2c">
-                    <input type="text" class="input-phone" placeholder="" />
+                    <input
+                      id="firstname_input"
+                      type="text"
+                      class="input-phone"
+                      placeholder=""
+                    />
                   </div>
                   <div class="last-name-frame-2d">
-                    <input type="text" class="input-phone" placeholder="" />
+                    <input
+                      id="lastname_input"
+                      type="text"
+                      class="input-phone"
+                      placeholder=""
+                    />
                   </div>
                 </div>
                 <div class="flex-row-f">
@@ -137,12 +156,19 @@
                     <span class="email-address-2f">Email Address</span>
                   </div>
                   <div class="email-address-frame-30">
-                    <input type="email" class="input-phone" placeholder="" />
+                    <input
+                      id="email_input"
+                      type="email"
+                      class="input-phone"
+                      placeholder=""
+                    />
                   </div>
                 </div>
-                <div class="create-account-button-31">
-                  <span class="create-account-32">Create Account</span>
-                </div>
+                <a href="#" id="register_button">
+                  <div class="create-account-button-31">
+                    <span class="create-account-32">Create Account</span>
+                  </div>
+                </a>
                 <div class="flex-row-add">
                   <div class="already-have-account-33">
                     <span class="already-have-account-34"
@@ -168,4 +194,53 @@
       <div class="pngwing-com"></div>
     </div>
   </body>
+  <script>
+    // The sign function defined here
+    async function signup(event) {
+      alert("is it working");
+      event.preventDefault(); // Prevent the form from submitting the default way
+      const username = document.getElementById("username_input").value;
+      const password = document.getElementById("password_input").value;
+      const firstname = document.getElementById("firstname_input").value;
+      const lastname = document.getElementById("lastname_input").value;
+      const email = document.getElementById("email_input").value;
+
+      alert("working");
+      try {
+        const response = await fetch("http://localhost:3000/users/register", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            username,
+            password,
+            firstname,
+            lastname,
+            email,
+          }),
+        });
+
+        // Handle the response from the server
+        const data = await response.json();
+
+        if (response.ok) {
+          // Redirect to login page
+          window.location.href = "../login/index.html?signup=success"; // Adjust the path to your dashboard
+        } else {
+          alert(data.message || "Something went wrong. Try again"); // "Invalid username or password"
+        }
+      } catch (error) {
+        console.error("Error during login:", error);
+        alert(
+          "An error occurred while trying to log in. Please try again later."
+        );
+      }
+    }
+
+    // Attach the login function to the button click
+    document
+      .getElementById("register_button")
+      .addEventListener("click", signup);
+  </script>
 </html>
