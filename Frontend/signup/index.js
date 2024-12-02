@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const contactButton = document.querySelector(".contact");
     const servicesButton = document.querySelector(".services-plus");
     const aboutButton = document.querySelector(".about");
+    const loginSpan = document.querySelector(".login-37");
   
     loginButton.addEventListener("click", () => {
       window.location.href = "../login/index.html";
@@ -34,5 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
     aboutButton.addEventListener("click", () => {
       window.location.href = "../about/index.html";
       // Add your about logic here
+    });
+    loginSpan.addEventListener("click", () => {
+      window.location.href = "../login/index.html";  // Redirect to the login page
     });
   });
