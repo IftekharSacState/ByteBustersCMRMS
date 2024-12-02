@@ -72,6 +72,7 @@ button {
   border: none;
   z-index: 61;
   border-radius: 10px;
+  transition: all 0.2s ease-in-out;
 }
 .frame {
   display: flex;
@@ -199,6 +200,7 @@ button {
   z-index: 4;
   overflow: hidden;
   border-radius: 8px;
+  transition: all 0.2s ease-in-out;
 }
 .profile {
   flex-shrink: 0;
@@ -265,6 +267,7 @@ button {
   z-index: 10;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .title {
   flex-shrink: 0;
@@ -797,6 +800,7 @@ button {
   z-index: 105;
   overflow: hidden;
   border-radius: 8px;
+  transition: all 0.2s ease-in-out;
 }
 .register {
   flex-shrink: 0;
@@ -844,6 +848,7 @@ button {
   z-index: 102;
   overflow: hidden;
   border-radius: 8px;
+  transition: all 0.2s ease-in-out;
 }
 .view-full-health-report {
   flex-shrink: 0;
@@ -1562,4 +1567,20 @@ button {
   text-transform: uppercase;
   white-space: nowrap;
   z-index: 55;
+}
+.navigation-pill:hover {
+  background-color: #007AFF; /* Change background color */
+  color: #fff; /* Change text color */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
+}
+.frame-button:hover,
+.button:hover,
+.button-14:hover {
+  background-color: #7b7b7b; /* Change background color */
+  color: #fff; /* Change text color */
+}
+
+.button-13:hover {
+  background-color: #0077ff;
+  color: #fff; /* Change text color */
 }

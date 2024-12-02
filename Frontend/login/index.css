@@ -86,8 +86,9 @@ button {
   z-index: 30;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
-.title-about {
+.about {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -119,8 +120,9 @@ button {
   z-index: 32;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
-.title-home {
+.home {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -152,8 +154,9 @@ button {
   z-index: 34;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
-.contact-title {
+.contact {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -185,8 +188,9 @@ button {
   z-index: 36;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
-.faq-title {
+.faq {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -218,6 +222,7 @@ button {
   z-index: 38;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .services-plus {
   flex-shrink: 0;
@@ -349,6 +354,7 @@ button {
   border: none;
   z-index: 11;
   outline: none;
+  padding-left: 55px;
 }
 .user-solid {
   position: absolute;
@@ -426,6 +432,7 @@ button {
   border: none;
   z-index: 18;
   outline: none;
+  padding-left:55px;
 }
 .lock-solid {
   position: absolute;
@@ -493,6 +500,7 @@ button {
   background: rgba(30, 93, 188, 0.2);
   border: none;
   z-index: 22;
+  transition: all 0.2s ease-in-out;
 }
 .login-a {
   flex-shrink: 0;
@@ -534,12 +542,14 @@ button {
 }
 .here {
   position: relative;
-  color: #1e5dbc;
+  color: #1e5dbc;  /* Retaining your current color */
   font-family: Inter, var(--default-font-family);
   font-size: 16px;
   font-weight: 700;
   line-height: 16px;
   text-align: left;
+  text-decoration: underline;  /* Underline to make it look like a link */
+  cursor: pointer;  /* Make cursor a pointer to show it’s clickable */
 }
 .to-reset {
   position: relative;
@@ -582,6 +592,8 @@ button {
   font-weight: 700;
   line-height: 16px;
   text-align: left;
+  text-decoration: underline;  
+  cursor: pointer;  
 }
 .button {
   display: flex;
@@ -600,6 +612,7 @@ button {
   border: 1px solid #2c2c2c;
   z-index: 28;
   overflow: hidden;
+  transition: all 0.2s ease-in-out;
 }
 .register-new-account {
   flex-shrink: 0;
@@ -615,3 +628,27 @@ button {
   white-space: nowrap;
   z-index: 29;
 }
+.navigation-pill:hover,
+.navigation-pill-1:hover,
+.navigation-pill-2:hover,
+.navigation-pill-3:hover,
+.navigation-pill-4:hover {
+  background-color: #007AFF; /* Change background color */
+  color: #fff; /* Change text color */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
+}
+
+.login-button:hover,
+.button:hover{
+  background-color: #1e5dbc; /* Change background color */
+  color: #fff; /* Change text color */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
+}
+
+/*Forgot Password & Employee Login*/
+.here:hover,
+.here-b { 
+  color: #1558a5;  /* Darken the color on hover */
+  text-decoration: underline;  /* Keep underline on hover */
+}
+

@@ -2752,3 +2752,7 @@ button {
   background: #705f79;
   z-index: 95;
 }
+.button:hover {
+  background-color: #7b7b7b; /* Change background color */
+  color: #fff; /* Change text color */
+}

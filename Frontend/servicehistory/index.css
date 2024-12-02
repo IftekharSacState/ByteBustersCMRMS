@@ -74,6 +74,7 @@ button {
   border: none;
   z-index: 85;
   border-radius: 10px;
+  transition: all 0.2s ease-in-out;
 }
 .frame-1 {
   display: flex;
@@ -128,6 +129,7 @@ button {
   border: none;
   z-index: 88;
   border-radius: 10px;
+  transition: all 0.2s ease-in-out;
 }
 .frame-4 {
   display: flex;
@@ -264,6 +266,7 @@ button {
   z-index: 3;
   overflow: hidden;
   border-radius: 8px;
+  transition: all 0.2s ease-in-out;
 }
 .profile {
   flex-shrink: 0;
@@ -324,8 +327,9 @@ button {
   border: none;
   z-index: 5;
   border-radius: 8px;
+  transition: all 0.2s ease-in-out;
 }
-.title {
+.home {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -1418,4 +1422,15 @@ button {
   text-align: left;
   white-space: nowrap;
   z-index: 69;
+}
+.navigation-pill:hover{
+  background-color: #007AFF; /* Change background color */
+  color: #fff; /* Change text color */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
+}
+.frame:hover,
+.frame-3:hover,
+.button:hover {
+  background-color: #7b7b7b; /* Change background color */
+  color: #fff; /* Change text color */
 }

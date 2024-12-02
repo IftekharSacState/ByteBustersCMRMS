@@ -2352,3 +2352,7 @@ button {
   background-size: cover;
   z-index: 10;
 }
+.button-frame:hover {
+  background-color: #7b7b7b; /* Change background color */
+  color: #fff; /* Change text color */
+}

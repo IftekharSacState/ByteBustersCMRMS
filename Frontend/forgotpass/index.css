@@ -112,8 +112,9 @@ button {
   z-index: 19;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
-.title {
+.contact {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -145,8 +146,9 @@ button {
   z-index: 21;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
-.title-3 {
+.faq {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -178,6 +180,7 @@ button {
   z-index: 23;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .services-plus {
   flex-shrink: 0;
@@ -211,6 +214,7 @@ button {
   z-index: 15;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .about {
   flex-shrink: 0;
@@ -244,6 +248,7 @@ button {
   z-index: 17;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .home {
   flex-shrink: 0;
@@ -304,10 +309,25 @@ button {
   height: 82.61%;
   top: 17.39%;
   left: 0;
-  border: 1px solid #000000;
+  border: 1px solid #626262;
   z-index: 10;
   overflow: hidden;
   border-radius: 8px;
+  background: transparent; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.frame-8 input {
+  width: 100%; 
+  padding: 10px;
+  font-size: 18px;
+  color: #000000;
+  background: transparent; 
+  border: none;
+  outline: none;
+  font-family: Inter, var(--default-font-family);
+  box-sizing: border-box;
 }
 .flex-row-edf {
   position: relative;
@@ -323,11 +343,15 @@ button {
   justify-content: center;
   flex-wrap: nowrap;
   gap: 10px;
-  position: relative;
-  width: 196px;
-  margin: 0 0 0 193px;
-  padding: 10px 10px 10px 10px;
-  z-index: 7;
+  position: absolute;
+  width: 580px;
+  height: 60px;
+  top: 1px;
+  nav-down:10;
+  padding: 20px 20 px;
+  z-index: 10;
+  border-radius: 8px; 
+  transition: all 0.2s ease-in-out;
 }
 .email-me {
   flex-shrink: 0;
@@ -410,4 +434,19 @@ button {
     no-repeat center;
   background-size: cover;
   z-index: 13;
+}
+.navigation-pill:hover,
+.navigation-pill-2:hover,
+.navigation-pill-4:hover,
+.navigation-pill-5:hover,
+.navigation-pill-6:hover {
+  background-color: #007AFF; /* Change background color */
+  color: #fff; /* Change text color */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
+}
+
+.frame-9:hover{
+  background-color: #1e5dbc; /* Change background color */
+  color: #fff; /* Change text color */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
 }

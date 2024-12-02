@@ -80,8 +80,9 @@ button {
   z-index: 62;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
-.title {
+.about {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -113,8 +114,9 @@ button {
   z-index: 64;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
-.title-2 {
+.home {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -147,7 +149,7 @@ button {
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
 }
-.title-4 {
+.contact {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -179,6 +181,7 @@ button {
   z-index: 68;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .faq {
   flex-shrink: 0;
@@ -209,23 +212,10 @@ button {
   cursor: pointer;
   background: #ffffff;
   border: none;
-  z-index: 70;
+  z-index: 67;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
-}
-.services-title {
-  flex-shrink: 0;
-  flex-basis: auto;
-  position: relative;
-  height: 16px;
-  color: #1e1e1e;
-  font-family: Inter, var(--default-font-family);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 16px;
-  text-align: left;
-  white-space: nowrap;
-  z-index: 71;
+  transition: all 0.2s ease-in-out;
 }
 .rectangle-7 {
   position: absolute;
@@ -733,4 +723,11 @@ button {
     no-repeat center;
   background-size: cover;
   z-index: 9;
+}
+.navigation-pill:hover,
+.navigation-pill-1:hover,
+.navigation-pill-5:hover,
+.navigation-pill-6:hover {
+  background-color: #007AFF; /* Change background color */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
 }

@@ -720,8 +720,9 @@ button {
   z-index: 75;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
-.title {
+.contact {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -753,8 +754,9 @@ button {
   z-index: 77;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
-.faq-title {
+.faq {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -786,8 +788,9 @@ button {
   z-index: 79;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
-.services-title {
+.services-plus {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -819,8 +822,9 @@ button {
   z-index: 71;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
-.about-title {
+.about {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -852,8 +856,9 @@ button {
   z-index: 73;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
-.home-title {
+.home {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -1124,6 +1129,7 @@ button {
   text-align: left;
   white-space: nowrap;
   z-index: 49;
+  transition: all 0.2s ease-in-out;
 }
 .flex-row-add {
   position: relative;
@@ -1257,4 +1263,19 @@ button {
     no-repeat center;
   background-size: cover;
   z-index: 24;
+}
+.navigation-pill:hover,
+.navigation-pill-21:hover,
+.nav-pill:hover,
+.nav-pill-22:hover,
+.nav-pill-23:hover {
+  background-color: #007AFF; /* Change background color */
+  color: #fff; /* Change text color */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
+}
+
+.create-account-32:hover {
+  background-color: #1e5dbc; /* Change background color */
+  color: #fff; /* Change text color */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
 }

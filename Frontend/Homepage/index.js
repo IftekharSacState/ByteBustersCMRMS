@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const contactButton = document.querySelector(".contact");
   const servicesButton = document.querySelector(".services-plus");
   const aboutButton = document.querySelector(".about");
+  const makeAppointmentButton = document.querySelector(".make-appointment");
 
   signInButton.addEventListener("click", () => {
     window.location.href = "../login/index.html";
@@ -31,6 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Add your services logic here
   });
 
+  makeAppointmentButton.addEventListener("click", () => {
+    window.location.href = "../login/index.html"; // Redirect to login page
+  });
   aboutButton.addEventListener("click", () => {
     window.location.href = "../about/index.html";
     // Add your about logic here

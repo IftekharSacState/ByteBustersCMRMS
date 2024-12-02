@@ -122,11 +122,13 @@ button {
   padding: 8px 8px 8px 8px;
   cursor: pointer;
   background: #ffffff;
-  border: 1px solid #767676;
+  border: none;
   z-index: 48;
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
+  outline:none;
 }
 .sign-in {
   flex-shrink: 0;
@@ -156,10 +158,11 @@ button {
   padding: 8px 8px 8px 8px;
   cursor: pointer;
   background: #ffffff;
-  border: 1px solid #2c2c2c;
+  border: none;
   z-index: 46;
   overflow: hidden;
   border-radius: 8px;
+  transition: all 0.2s ease-in-out;
 }
 .register {
   flex-shrink: 0;
@@ -193,6 +196,7 @@ button {
   z-index: 32;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .faq {
   flex-shrink: 0;
@@ -226,6 +230,7 @@ button {
   z-index: 30;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .contact {
   flex-shrink: 0;
@@ -259,6 +264,7 @@ button {
   z-index: 34;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .services-plus {
   flex-shrink: 0;
@@ -292,6 +298,7 @@ button {
   z-index: 26;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .about {
   flex-shrink: 0;
@@ -425,19 +432,29 @@ button {
 .make-appointment {
   flex-shrink: 0;
   position: relative;
-  width: 203px;
-  height: 20px;
   cursor: pointer;
   color: #ffffff;
   font-family: Days One, var(--default-font-family);
   font-size: 16px;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 20px; /* Matches font size for vertical centering */
   white-space: nowrap;
   letter-spacing: 0.32px;
-  background: transparent;
+  background-color: #007bff; /* Blue background */
   border: none;
   z-index: 45;
+
+  /* Dynamic sizing and padding */
+  width: auto; 
+  height: auto; 
+  padding: 14px 36px; 
+
+  /* Box styling */
+  border-radius: 5px; 
+  text-align: left;
+  box-sizing: border-box; 
+  transition: all 0.2s ease-in-out; /* Smooth hover transition */
+  margin-left: -20px;
 }
 .group {
   position: absolute;
@@ -512,26 +529,6 @@ button {
   padding: 15px 20px 15px 20px;
   background: #1e5dbc;
   z-index: 22;
-}
-.make-appointment-8 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  flex-basis: auto;
-  position: relative;
-  width: 203px;
-  height: 20px;
-  color: #ffffff;
-  font-family: Days One, var(--default-font-family);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  text-align: center;
-  text-transform: uppercase;
-  white-space: nowrap;
-  letter-spacing: 0.32px;
-  z-index: 23;
 }
 .phone-number-9 {
   display: flex;
@@ -872,4 +869,30 @@ button {
   text-transform: uppercase;
   white-space: nowrap;
   z-index: 13;
+}
+/* Navigation Pills Hover Effect */
+.navigation-pill:hover,
+.navigation-pill-1:hover,
+.navigation-pill-2:hover,
+.navigation-pill-3:hover,
+.navigation-pill-4:hover,
+.button:hover,
+.button-1:hover {
+  background-color: #007AFF; /* Change background color */
+  color: #fff; /* Change text color */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
+  border: 1px solid transparent;
+}
+
+/* Make Appointment Button Hover Effect */
+.make-appointment:hover {
+  background-color: #00aeff; /* Change background color on hover */
+  color: #fff; /* Change text color */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
+}
+/* Remove border and outline on hover for buttons */
+.button:hover,
+.button-1:hover {
+  outline: none; /* Remove outline */
+  border: none; /* Remove border */
 }
