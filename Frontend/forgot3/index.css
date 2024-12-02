@@ -112,8 +112,9 @@ button {
   z-index: 21;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
-.title-contact {
+.contact {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -145,8 +146,9 @@ button {
   z-index: 23;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
-.title-faq {
+.faq {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -178,8 +180,9 @@ button {
   z-index: 25;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
-.title-services {
+.services-plus {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -211,6 +214,7 @@ button {
   z-index: 17;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .about {
   flex-shrink: 0;
@@ -244,6 +248,7 @@ button {
   z-index: 19;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .home {
   flex-shrink: 0;
@@ -304,6 +309,23 @@ button {
   z-index: 7;
   overflow: hidden;
   border-radius: 8px;
+  background: transparent;  
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  box-shadow: none; 
+}
+.change-password-5 input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  color: #000000;
+  background: transparent;  
+  border: none;  
+  outline: none;
+  font-family: Inter, var(--default-font-family);
+  box-sizing: border-box;
+  text-align: left;
 }
 .flex-row-d {
   position: relative;
@@ -350,6 +372,23 @@ button {
   z-index: 10;
   overflow: hidden;
   border-radius: 8px;
+  background: transparent;  
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  box-shadow: none; 
+}
+.repeat-password-frame input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  color: #000000;
+  background: transparent;  
+  border: none;  
+  outline: none;
+  font-family: Inter, var(--default-font-family);
+  box-sizing: border-box;
+  text-align: left;
 }
 .flex-row-b {
   position: relative;
@@ -365,13 +404,17 @@ button {
   justify-content: center;
   flex-wrap: nowrap;
   gap: 10px;
-  position: relative;
-  width: 374px;
-  margin: 0 0 0 96px;
-  padding: 10px 10px 10px 10px;
-  z-index: 13;
+  position: absolute;
+  width: 580px;
+  height: 60px;
+  top: 1px;
+  nav-down:10;
+  padding: 20px 20 px;
+  z-index: 10;
+  border-radius: 8px; 
+  transition: all 0.2s ease-in-out;
 }
-.change-password-8 {
+.change-pass {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
@@ -452,4 +495,19 @@ button {
     no-repeat center;
   background-size: cover;
   z-index: 15;
+}
+.navigation-pill:hover,
+.nav-pill:hover,
+.nav-pill-2:hover,
+.nav-pill-3:hover,
+.nav-pill-4:hover {
+  background-color: #007AFF; /* Change background color */
+  color: #fff; /* Change text color */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
+}
+
+.frame-7:hover{
+  background-color: #1e5dbc; /* Change background color */
+  color: #fff; /* Change text color */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
 }

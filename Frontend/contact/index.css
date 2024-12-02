@@ -80,6 +80,7 @@ button {
   z-index: 59;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .about {
   flex-shrink: 0;
@@ -113,6 +114,7 @@ button {
   z-index: 61;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .home {
   flex-shrink: 0;
@@ -195,6 +197,7 @@ button {
   z-index: 65;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .faq {
   flex-shrink: 0;
@@ -228,6 +231,7 @@ button {
   z-index: 67;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .services-plus {
   flex-shrink: 0;
@@ -746,7 +750,7 @@ button {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
-  width: 125px;
+  width: 183px;
   height: 20px;
   color: #ffffff;
   font-family: Days One, var(--default-font-family);
@@ -769,4 +773,12 @@ button {
     no-repeat center;
   background-size: cover;
   z-index: 9;
+}
+.navigation-pill:hover,
+.navigation-pill-1:hover,
+.navigation-pill-5:hover,
+.navigation-pill-6:hover {
+  background-color: #007AFF; /* Change background color */
+  color: #fff; /* Change text color */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
 }

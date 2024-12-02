@@ -6,7 +6,7 @@
 }
 
 .main-container {
-  overflow: hidden;
+  overflow: auto;
 }
 
 .main-container,
@@ -28,7 +28,7 @@ button {
   margin: 0 auto;
   background: rgba(30, 93, 188, 0.1);
   border: 1px solid #000000;
-  overflow: hidden;
+  overflow: auto;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 .rectangle {
@@ -53,17 +53,6 @@ button {
   background-size: cover;
   z-index: 75;
 }
-.crm-rs-copy {
-  position: absolute;
-  width: 103px;
-  height: 96px;
-  top: 22px;
-  left: 524px;
-  background: url(./assets/images/8131fde8a38c61d67b151d6fe87d951ba69be2ae.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 74;
-}
 .navigation-pill {
   display: flex;
   align-items: center;
@@ -82,6 +71,7 @@ button {
   z-index: 2;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .about {
   flex-shrink: 0;
@@ -115,6 +105,7 @@ button {
   z-index: 4;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .home {
   flex-shrink: 0;
@@ -148,6 +139,7 @@ button {
   z-index: 6;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .contact {
   flex-shrink: 0;
@@ -181,6 +173,7 @@ button {
   z-index: 8;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .faq {
   flex-shrink: 0;
@@ -802,4 +795,12 @@ button {
   text-transform: uppercase;
   white-space: nowrap;
   z-index: 37;
+}
+.navigation-pill:hover,
+.navigation-pill-1:hover,
+.navigation-pill-3:hover,
+.navigation-pill-5:hover {
+  background-color: #007AFF; /* Change background color */
+  color: #fff; /* Change text color */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
 }

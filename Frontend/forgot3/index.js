@@ -1,16 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // const signInButton = document.querySelector(".sign-in");
+    const changePassButton = document.querySelector(".change-pass");
     const homeButton = document.querySelector(".home");
     const faqButton = document.querySelector(".faq");
     const contactButton = document.querySelector(".contact");
     const servicesButton = document.querySelector(".services-plus");
     const aboutButton = document.querySelector(".about");
-    const confirmAppointmentButton = document.querySelector(".rectangle-e");
   
-    // signInButton.addEventListener("click", () => {
-    //   window.location.href = "../login/index.html";
-    //   // Add your sign-in logic here
-    // });
+    changePassButton.addEventListener("click", () => {
+      window.location.href = "../login/index.html";
+      // Add your sign-in logic here
+    });
   
     homeButton.addEventListener("click", () => {
       window.location.href = "../Homepage/index.html";
@@ -36,8 +35,4 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = "../about/index.html";
       // Add your about logic here
     });
-    confirmAppointmentButton.addEventListener("click", () => {
-      window.location.href = "../confirmation/index.html";  // Redirect to the confirmation page
-    });
   });
-

@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile Settings</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PingFang+SC:wght@400&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" />
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
@@ -20,7 +19,9 @@
       </div>
       <div class="flex-column-fea">
         <div class="rectangle-2">
-          <div class="rectangle-3"><div class="icon"></div></div>
+          <div class="rectangle-3">
+            <button id="back-button" class="icon-button"><div class="icon"></div></button>
+        </div>
           <div class="flex-row-abb">
             <span class="abubakr-iyyaz">Abubakr Iyyaz </span>
             <div class="rectangle-4"><span class="edit">Edit</span></div>
@@ -78,9 +79,10 @@
           <span class="month-ago">1 month ago</span>
         </div>
         <span class="welcome-abubakr">Welcome, Abubakr</span
-        ><button class="frame"><span class="small-button">Logout</span></button
+        ><button id = "logout-button" class="frame"><span class="small-button">Logout</span></button
         ><span class="tue-june">Tue, 07 June 2022</span>
       </div>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>

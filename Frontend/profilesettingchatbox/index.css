@@ -159,13 +159,14 @@ button {
   background: #1e5dbc;
   z-index: 24;
   border-radius: 8px;
+  transition: all 0.2s ease-in-out;
 }
 .edit {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   position: absolute;
-  height: 54.55%;
+  height: 55;
   top: 22.73%;
   left: 34.41%;
   color: #ffffff;
@@ -563,6 +564,8 @@ button {
   font-size: 0px;
   z-index: 28;
   overflow: visible auto;
+  border-radius: 8px; 
+  transition: all 0.2s ease-in-out;
 }
 .text-11 {
   display: block;
@@ -689,6 +692,7 @@ button {
   border: none;
   z-index: 62;
   border-radius: 10px;
+  transition: all 0.2s ease-in-out;
 }
 .small-button {
   display: flex;
@@ -724,4 +728,33 @@ button {
   text-align: left;
   white-space: nowrap;
   z-index: 3;
+}
+
+.rectangle-4:hover,
+.frame:hover {
+  background-color: #0077ff;
+  color: #fff; /* Change text color */
+}
+
+.flex-row-ff:hover {
+  background-color: #007AFF; /* Change background color */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.icon-button .icon {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  margin: 28.5px 0 0 9.5px;
+  background: url(./assets/images/99994ee4-b928-47e2-aa40-4d3282affa74.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 59;
 }

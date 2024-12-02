@@ -80,6 +80,7 @@ button {
   z-index: 6;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .about-title {
   flex-shrink: 0;
@@ -113,6 +114,7 @@ button {
   z-index: 8;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .home-title {
   flex-shrink: 0;
@@ -146,6 +148,7 @@ button {
   z-index: 10;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .contact-title {
   flex-shrink: 0;
@@ -179,6 +182,7 @@ button {
   z-index: 12;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .title {
   flex-shrink: 0;
@@ -212,6 +216,7 @@ button {
   z-index: 14;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .title-5 {
   flex-shrink: 0;
@@ -282,6 +287,10 @@ button {
   border: none;
   z-index: 2;
   border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+}
+.action-button .nav-link{ 
+  margin-left: -4px; /*moves "Home" more towards the center*/
 }
 .nav-link {
   display: flex;
@@ -299,4 +308,14 @@ button {
   text-align: left;
   white-space: nowrap;
   z-index: 3;
+}
+.navigation-pill:hover,
+.navigation-pill-1:hover,
+.navigation-pill-2:hover,
+.navigation-pill-3:hover,
+.navigation-pill-4:hover,
+.action-button:hover {
+  background-color: #007AFF; /* Change background color */
+  color: #fff; /* Change text color */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
 }

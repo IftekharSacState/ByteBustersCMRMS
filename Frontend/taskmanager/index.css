@@ -767,6 +767,7 @@ button {
   border: none;
   z-index: 152;
   border-radius: 10px;
+  transition: all 0.2s ease-in-out;
 }
 .frame-31 {
   display: flex;
@@ -1949,4 +1950,8 @@ button {
   text-align: left;
   white-space: nowrap;
   z-index: 150;
+}
+.button:hover {
+  background-color: #7b7b7b; /* Change background color */
+  color: #fff; /* Change text color */
 }

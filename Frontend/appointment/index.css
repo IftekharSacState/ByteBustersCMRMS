@@ -27,7 +27,7 @@ button {
   height: 1024px;
   margin: 0 auto;
   background: rgba(30, 93, 188, 0.1);
-  overflow: hidden;
+  overflow: auto;
 }
 .rectangle {
   position: absolute;
@@ -68,6 +68,7 @@ button {
   z-index: 57;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .title {
   flex-shrink: 0;
@@ -101,6 +102,7 @@ button {
   z-index: 59;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .title-2 {
   flex-shrink: 0;
@@ -134,6 +136,7 @@ button {
   z-index: 61;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .title-4 {
   flex-shrink: 0;
@@ -167,6 +170,7 @@ button {
   z-index: 63;
   border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
 }
 .title-6 {
   flex-shrink: 0;
@@ -1514,6 +1518,7 @@ button {
   position: relative;
   min-width: 0;
   z-index: 173;
+  height: 40px;
 }
 .cells-44 {
   align-self: stretch;
@@ -2243,10 +2248,9 @@ button {
   align-items: flex-start;
   justify-content: flex-start;
   position: absolute;
-  width: 74.571px;
   height: 55.183px;
   top: 57.811px;
-  left: 78px;
+  left: 40px;
   color: #1e5dbc;
   font-family: DM Sans, var(--default-font-family);
   font-size: 16px;
@@ -2690,7 +2694,7 @@ button {
   position: absolute;
   height: 22px;
   top: 1616px;
-  left: 345px;
+  left: 315px;
   color: #ffffff;
   font-family: Open Sans, var(--default-font-family);
   font-size: 16px;
@@ -2699,15 +2703,18 @@ button {
   text-align: left;
   white-space: nowrap;
   z-index: 206;
+ 
 }
-.vector-5b {
-  position: absolute;
-  width: 1.52%;
-  height: 2.15%;
-  top: 157.81%;
-  left: 21.45%;
-  background: url(./assets/images/122fc27f-32ad-473e-be1a-a3ca7a1baa8a.png)
-    no-repeat center;
-  background-size: 100% 100%;
-  z-index: 209;
+.optional-recommended .optional-icon {
+  width: 30px;  /* Adjust the size of the icon */
+  height: 30px; /* Adjust the size of the icon */
+  margin-right: 10px; /* Add space between the image and the text */
+}
+.navigation-pill:hover,
+.navigation-pill-1:hover,
+.navigation-pill-3:hover,
+.navigation-pill-5:hover {
+  background-color: #007AFF; /* Change background color */
+  color: #fff; /* Change text color */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add box-shadow effect */
 }

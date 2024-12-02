@@ -603,6 +603,7 @@ button {
   border: none;
   z-index: 167;
   border-radius: 10px;
+  transition: all 0.2s ease-in-out;
 }
 .frame-29 {
   display: flex;
@@ -2210,4 +2211,8 @@ button {
   text-align: left;
   white-space: nowrap;
   z-index: 106;
+}
+.frame-28:hover {
+  background-color: #7b7b7b; /* Change background color */
+  color: #fff; /* Change text color */
 }
