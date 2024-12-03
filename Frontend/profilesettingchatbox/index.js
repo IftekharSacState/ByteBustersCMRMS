@@ -4,6 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.getElementById('back-button').addEventListener('click', () => {
-        window.location.href = '../Homepage/index.html';
+        window.location.href = '../custdash/index.html';
       });
 });
