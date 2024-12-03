@@ -9,6 +9,27 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Days+One:wght@400&display=swap" />
     <link rel="stylesheet" href="index.css" />
+    <style>
+      #container_iftekhar {
+        height: 700px;
+        width: 700px;
+        background-color: white;
+        z-index: 1000000000;
+        position: absolute;
+        top: 200px;
+        right: 200px;
+        padding: 20px;
+      }
+
+      #container_iftekhar input, #container_iftekhar select, #container_iftekhar label {
+        display: block;
+      }
+
+      input, select, button {
+        margin-bottom: 20px;
+      }
+      </style>
+      
   </head>
   <body>
     <div class="main-container">
@@ -45,88 +66,6 @@
         <span class="name">Catherine Lopez</span
         ><span class="location">ELk Grove, CA</span>
       </div>
-      <span class="choose-date">Choose a Date</span>
-      <div class="choose-date-8">
-        <div class="calendar">
-          <div class="header">
-            <div class="select">
-              <button class="text">
-                <span class="month">August</span>
-                <div class="chevron-down"><div class="vector-9"></div></div>
-              </button>
-            </div>
-            <div class="select-a">
-              <div class="text-b">
-                <span class="year">2023</span>
-                <div class="chevron-down-c"><div class="vector-d"></div></div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="cells"><span class="day">Mo</span></div>
-            <div class="cells-e"><span class="day-f">Tu</span></div>
-            <div class="cells-10"><span class="day-11">We</span></div>
-            <div class="cells-12"><span class="th">Th</span></div>
-            <div class="cells-13"><span class="fri">Fri</span></div>
-            <div class="cells-14"><span class="sa">Sa</span></div>
-            <div class="cells-15"><span class="su">Su</span></div>
-          </div>
-          <div class="row-16">
-            <div class="cells-17"><span class="empty">29</span></div>
-            <div class="cells-18"><span class="empty-19">30</span></div>
-            <div class="cells-1a"><span class="empty-1b">31</span></div>
-            <div class="cells-1c"><span class="empty-1d">1</span></div>
-            <div class="cells-1e"><span class="empty-1f">2</span></div>
-            <div class="cells-20"><span class="empty-21">3</span></div>
-            <div class="cells-22"><span class="empty-23">4</span></div>
-          </div>
-          <div class="row-24">
-            <div class="cells-25"><span class="empty-26">5</span></div>
-            <div class="cells-27"><span class="empty-28">6</span></div>
-            <div class="cells-29"><span class="empty-2a">7</span></div>
-            <div class="cells-2b"><span class="empty-2c">8</span></div>
-            <div class="cells-2d"><span class="empty-2e">9</span></div>
-            <div class="cells-2f"><span class="empty-30">10</span></div>
-            <div class="cells-31"><span class="empty-32">11</span></div>
-          </div>
-          <div class="row-33">
-            <div class="cells-34"><span class="span-12">12</span></div>
-            <div class="cells-35"><span class="span-13">13</span></div>
-            <div class="cells-36"><span class="span-14">14</span></div>
-            <div class="cells-37"><span class="span-15">15</span></div>
-            <div class="cells-38"><span class="span-16">16</span></div>
-            <div class="cells-39"><span class="span-17">17</span></div>
-            <div class="cells-3a"><span class="span-18">18</span></div>
-          </div>
-          <div class="row-3b">
-            <div class="cells-3c"><span class="span-19">19</span></div>
-            <div class="cells-3d"><span class="span-20">20</span></div>
-            <div class="cells-3e"><span class="span-21">21</span></div>
-            <div class="cells-3f"><span class="span-22">22</span></div>
-            <div class="cells-40"><span class="span-23">23</span></div>
-            <div class="cells-41"><span class="span-24">24</span></div>
-            <div class="cells-42"><span class="span-25">25</span></div>
-          </div>
-          <div class="row-43">
-            <div class="cells-44"><span class="span-26">26</span></div>
-            <button class="button"><span class="span-27">27</span></button>
-            <div class="cells-45"><span class="span-28">28</span></div>
-            <div class="cells-46"><span class="span-29">29</span></div>
-            <div class="cells-47"><span class="text-32">30</span></div>
-            <div class="section-12"><span class="text-33">1</span></div>
-            <div class="section-13"><span class="text-34">2</span></div>
-          </div>
-          <div class="section-14">
-            <div class="group-f"><span class="text-35">3</span></div>
-            <div class="section-15"><span class="text-36">4</span></div>
-            <div class="group-10"><span class="text-37">5</span></div>
-            <div class="section-16"><span class="text-38">6</span></div>
-            <div class="wrapper-e"><span class="text-39">7</span></div>
-            <div class="wrapper-f"><span class="text-3a">8</span></div>
-            <div class="wrapper-10"><span class="text-3b">9</span></div>
-          </div>
-        </div>
-      </div>
       <div class="box-d">
         <div class="section-17"><div class="pic-4"></div></div>
         <span class="text-3c"
@@ -138,8 +77,7 @@
         <span class="text-3d">Bradford B. Pounds</span
         ><span class="text-3e">Sacramento, CA</span>
       </div>
-      <span class="text-3f">Pick a time</span>
-      <div class="wrapper-11"></div>
+      
       <div class="group-11">
         <span class="text-40">The Magic Happening here</span
         ><span class="text-41"
@@ -173,22 +111,7 @@
         ><span class="our-work">Our work</span>
         
       </div>
-      <button class="button-cells"><span class="am">9:30 am</span></button
-      ><button class="button-cells-4a">
-        <span class="am-4b">10:30 am</span></button
-      ><button class="button-cells-4c">
-        <span class="am-4d">11:30 am</span></button
-      ><button class="button-cells-4e">
-        <span class="am-4f">12:30 am</span></button
-      ><button class="button-cells-50"><span class="pm">1:30 pm</span></button
-      ><button class="button-cells-51">
-        <span class="pm-52">2:30 pm</span>
-      </button>
-      <div class="cells-53"><span class="pm-54">5:30 pm</span></div>
-      <div class="cells-55"><span class="pm-56">4:30 pm</span></div>
-      <div class="cells-57"><span class="pm-58">3:30 pm</span></div>
-      <div class="frame"><span class="small-button">Back</span></div>
-      <div class="frame-59"><span class="small-button-5a">Continue</span></div>
+      
       <div class="pngwing-com"></div>
       <div class="union"></div>
       <span class="hello-lets-talk">Hello, Let’s Talk !</span>
@@ -202,5 +125,105 @@
         
       <div class="vector-5b"></div>
     </div>
+
+    <div id="container_iftekhar">
+      <h1>Schedule an appointment</h1>
+      <form>
+        <label>
+          Select a service
+        </label>
+        <select id="service_type_input">
+          <option value="oil change">
+            oil change
+          </option>
+          
+        </select>
+        <label>
+          Choose a date and time:
+        </label>
+        <input type="datetime-local" id="date_input" />
+        <label>
+          Choose a mechanic
+        </label>
+        <select id="mechanic_input">
+          <option value="2">
+            Iftekhar Ahmad
+          </option>
+          <option>
+            <script src="../../Backend/routes/mechanics.js">
+              fetch(router.get())
+              .then(res => res.json())
+              .then(data => {
+                console.log(data)
+              })
+
+            </script>
+          </option>
+        </select>
+        <input type="hidden" id="customer_id" value="0" />
+        <button id="submit_btn">Schedule</button>
+      </form>
+    </div>
   </body>
+
+  <script>
+    // The login function defined here
+    async function schedule(event) {
+
+      event.preventDefault(); // Prevent the form from submitting the default way
+      const serviceType = document.getElementById("service_type_input").value;
+      const date = document.getElementById("date_input").value;
+      const mechanicId = document.getElementById("mechanic_input").value;
+      const customerId = document.getElementById("customer_id").value;
+      //const status = "Under work";
+
+
+      //const { customerId, mechanicId, date, serviceType, status } = req.body;
+
+      confirm("Are you sure you want to schedule a(n) "+serviceType+" appointment on "+ date);
+      try {
+        const response = await fetch("http://localhost:3000/appointments/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ customerId, mechanicId,  date, serviceType, status}),
+        });
+
+        // Handle the response from the server
+        const data = await response.json();
+
+        if (response.ok) {
+          // Store the user's data in localStorage
+          alert("You're appointment is CONFIRMED for "+date)
+          // Redirect to the dashboard
+          window.location.href = "../custdash/index.html"; // Adjust the path to your dashboard
+        } else {
+          alert(data.message); // "Invalid username or password"
+        }
+      } catch (error) {
+        console.error("Error during login:", error);
+        alert(
+          "An error occurred while trying to log in. Please try again later."
+        );
+      }
+    }
+
+    document.getElementById("submit_btn").addEventListener("click", schedule);
+
+    function getLoggedInUser() {
+      // Retrieve user data from localStorage
+      const user = JSON.parse(localStorage.getItem("userid"));
+      console.log(user);
+      if (user) {
+        // Update the element with the user's name
+        document.getElementById("customer_id").value = user;
+      } else {
+        console.log("No user is logged in.");
+      }
+    }
+
+    getLoggedInUser();
+
+  </script>
 </html>
