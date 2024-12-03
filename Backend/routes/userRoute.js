@@ -65,4 +65,41 @@ router.post("/register", async (req, res) => {
   }
 });
 
+// Forgot Password Route
+router.post("/forgotpassword", async (req, res) => {
+  const { email } = req.body;
+  console.log(email);
+
+  try {
+    // Check if the email exists in the database
+    const [results] = await db
+      .promise()
+      .query("SELECT * FROM Users WHERE email = ?", [email]);
+
+    // If user is not found
+    if (results.length === 0) {
+      return res
+        .status(401)
+        .json({ success: false, message: "Email not found" });
+    }
+
+    // Reset password to 'password'
+    await db
+      .promise()
+      .query("UPDATE Users SET password = ? WHERE email = ?", [
+        "password",
+        email,
+      ]);
+
+    // Send email logic here
+    return res.status(200).json({
+      success: true,
+      message: "Email found. Password has been reset to 'password'.",
+    });
+  } catch (err) {
+    console.error("Database error:", err.message);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+});
+
 module.exports = router;
