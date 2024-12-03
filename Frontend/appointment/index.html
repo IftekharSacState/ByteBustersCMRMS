@@ -172,9 +172,7 @@
           <option value="2">
             Iftekhar Ahmad
           </option>
-          <option>
-            
-          </option>
+          
         </select>
         <input type="hidden" id="customer_id" value="0" />
         <button id="submit_btn">Schedule</button>
@@ -241,5 +239,29 @@
 
     getLoggedInUser();
 
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      const mechanicSelect = document.getElementById("mechanic_input");
+
+      try {
+        const response = await fetch("http://localhost:3000/users/mechanicslist");
+        if (!response.ok) {
+          throw new Error("Failed to fetch mechanics");
+        }
+
+        const mechanics = await response.json();
+
+        mechanics.forEach(mechanic => {
+          const option = document.createElement("option");
+          option.value = mechanic.id;
+          option.textContent = mechanic.name;
+          mechanicSelect.appendChild(option);
+        });
+      } catch (error) {
+        console.error("Error fetching mechanics:", error);
+      }
+    });
   </script>
 </html>
