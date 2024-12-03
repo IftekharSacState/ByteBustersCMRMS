@@ -638,9 +638,15 @@ button {
   justify-content: flex-start;
   position: absolute;
   width: 14px;
+<<<<<<< HEAD
   height: 85px;
   top: 60px;
   left: 150px;
+=======
+  height: 50px;
+  top: 65px;
+  left: 124px;
+>>>>>>> 30d3415dd37c841247646d771285489171fb1eed
   color: #1e5dbc;
   font-family: Lato, var(--default-font-family);
   font-size: 12px;
