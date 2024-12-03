@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const emailInput = document.getElementById("email");
   
     emailMeButton.addEventListener("click", async () => {
+      confirm("Are you sure you want to reset your password?");
       try {
         if (emailInput.value === "") {
           throw new Error("Please enter your email address");
@@ -27,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Handle response
         if (response.status === 200) {
           alert("Your password has been reset to 'password'.");
+          window.location.href = "../login/index.html";
         } else {
           alert("Error");
         }
