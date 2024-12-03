@@ -15,11 +15,33 @@ function queryAsync(sql, params) {
   });
 }
 
-// Get all appointments
+// Route to get all appointments for a specific customer (upcoming and previous)
 router.get("/", async (req, res) => {
+  // Assuming customerId is passed in the query parameters or via session
+  const customerId = req.query.customerId; // This can be part of the query string
+
+  if (!customerId) {
+    return res.status(400).json({ error: "customerId is required" });
+  }
+
   try {
-    const results = await queryAsync("SELECT * FROM Appointments");
-    res.json(results); // Return the results as a JSON response
+    // Query for upcoming appointments (status != 'done' for the specific customer)
+    const upcomingAppointments = await queryAsync(
+      "SELECT * FROM Appointments WHERE status != 'done' AND customerId = ?",
+      [customerId]
+    );
+
+    // Query for previous appointments (status = 'done' for the specific customer)
+    const previousAppointments = await queryAsync(
+      "SELECT * FROM Appointments WHERE status = 'done' AND customerId = ?",
+      [customerId]
+    );
+
+    // Respond with both upcoming and previous appointments
+    res.json({
+      upcoming: upcomingAppointments,
+      previous: previousAppointments,
+    });
   } catch (err) {
     console.error("Database error:", err.message);
     res.status(500).json({ error: "Internal server error" });
