@@ -224,7 +224,7 @@
 
         if (response.ok) {
           // Redirect to login page
-          alert("Sign up successful! Redirecting...");
+          alert("Sign up successful! Redirecting to login page...");
           window.location.href = "../login/index.html?signup=success"; // Adjust the path to your dashboard
         } else {
           alert(data.message || "Something went wrong. Try again"); // "Invalid username or password"
