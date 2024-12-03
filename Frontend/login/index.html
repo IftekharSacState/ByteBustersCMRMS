@@ -103,6 +103,7 @@
         if (response.ok) {
           // Store the user's data in localStorage
           localStorage.setItem("user", JSON.stringify({ username }));
+          localStorage.setItem("userid", data.user.id);
           if (data.user.userType == "Customer") {
             alert("YOU ARE A CUSTOMER");
           } else if (data.user.userType == "Mechanic") {
