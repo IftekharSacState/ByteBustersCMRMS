@@ -9,6 +9,27 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Days+One:wght@400&display=swap" />
     <link rel="stylesheet" href="index.css" />
+    <style>
+      #container_iftekhar {
+        height: 700px;
+        width: 700px;
+        background-color: white;
+        z-index: 1000000000;
+        position: absolute;
+        top: 200px;
+        right: 200px;
+        padding: 20px;
+      }
+
+      #container_iftekhar input, #container_iftekhar select, #container_iftekhar label {
+        display: block;
+      }
+
+      input, select, button {
+        margin-bottom: 20px;
+      }
+      </style>
+      
   </head>
   <body>
     <div class="main-container">
@@ -106,8 +127,7 @@
             <div class="cells-40"><span class="span-23">23</span></div>
             <div class="cells-41"><span class="span-24">24</span></div>
             <div class="cells-42"><span class="span-25">25</span></div>
-
-         </div>
+          </div>
           <div class="row-43">
             <div class="cells-44"><span class="span-26">26</span></div>
             <button class="button"><span class="span-27">27</span></button>
@@ -116,7 +136,7 @@
             <div class="cells-47"><span class="text-32">30</span></div>
             <div class="section-12"><span class="text-33">1</span></div>
             <div class="section-13"><span class="text-34">2</span></div>
-          </div> 
+          </div>
           <div class="section-14">
             <div class="group-f"><span class="text-35">3</span></div>
             <div class="section-15"><span class="text-36">4</span></div>
@@ -139,8 +159,7 @@
         <span class="text-3d">Bradford B. Pounds</span
         ><span class="text-3e">Sacramento, CA</span>
       </div>
-      <span class="text-3f">Pick a time</span>
-      <div class="wrapper-11"></div>
+      
       <div class="group-11">
         <span class="text-40">The Magic Happening here</span
         ><span class="text-41"
@@ -174,30 +193,152 @@
         ><span class="our-work">Our work</span>
         
       </div>
-      <button class="button-cells"><span class="am">9:30 am</span></button
-      ><button class="button-cells-4a">
-        <span class="am-4b">10:30 am</span></button
-      ><button class="button-cells-4c">
-        <span class="am-4d">11:30 am</span></button
-      ><button class="button-cells-4e">
-        <span class="am-4f">12:30 am</span></button
-      ><button class="button-cells-50"><span class="pm">1:30 pm</span></button
-      ><button class="button-cells-51">
-        <span class="pm-52">2:30 pm</span>
-      </button>
-      <div class="cells-53"><span class="pm-54">5:30 pm</span></div>
-      <div class="cells-55"><span class="pm-56">4:30 pm</span></div>
-      <div class="cells-57"><span class="pm-58">3:30 pm</span></div>
-      <div class="frame"><span class="small-button">Back</span></div>
-      <div class="frame-59"><span class="small-button-5a">Continue</span></div>
+      
       <div class="pngwing-com"></div>
       <div class="union"></div>
       <span class="hello-lets-talk">Hello, Let’s Talk !</span>
       <span class="schedule-appointment"
-        >Schedule a 30 min one-to-one Appointment to discuss your
+        >Schedule a 30 min one-to-one Appointment to dicuss your
         challenges</span
       ><span class="optional-recommended"
+        >This is optional but highly recommended!</span
       >
+      <div class="vector-5b"></div>
+    </div>
+
+    <div id="container_iftekhar">
+      <h1>Schedule an appointment</h1>
+      <form>
+        <label>
+          Select a service
+        </label>
+        <select id="service_type_input">
+          <option value="oil change">
+            Oil Change
+          </option>
+          <option value="wheel balancing">
+            Wheel Balancing Service
+          </option>
+          <option value="overhaul">
+            Overhaul Services
+          </option>          
+          <option value="brake-repair-maintenance">
+            Break Repair and Maintenance
+          </option>
+          <option value="transmission-services">
+            Transmission Services
+          </option>
+          <option value="engine-diagnostics-repair">
+            Engine Diagnostics and Repair
+          </option>
+          <option value="battery-replacement">
+            Battery Replacement
+          </option>
+          <option value="ac-check-repair">
+            AC check and repair
+          </option>
+          <option value="maintenance-concern-checkup">
+            Maintenance Concern Checkup
+          </option>
+        </select>
+        <label>
+          Choose a date and time:
+        </label>
+        <input type="datetime-local" id="date_input" />
+        <label>
+          Choose a mechanic
+        </label>
+        <select id="mechanic_input">
+          
+        </select>
+        <input type="hidden" id="customer_id" value="0" />
+        <button id="submit_btn">Schedule</button>
+      </form>
     </div>
   </body>
+
+  <script>
+    // The login function defined here
+    async function schedule(event) {
+
+      event.preventDefault(); // Prevent the form from submitting the default way
+      const serviceType = document.getElementById("service_type_input").value;
+      const date = document.getElementById("date_input").value;
+      const mechanicId = document.getElementById("mechanic_input").value;
+      const customerId = document.getElementById("customer_id").value;
+      //const status = "Under work";
+
+
+      //const { customerId, mechanicId, date, serviceType, status } = req.body;
+
+      confirm("Are you sure you want to schedule a(n) "+serviceType+" appointment on "+ date);
+      try {
+        const response = await fetch("http://localhost:3000/appointments/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ customerId, mechanicId,  date, serviceType, status}),
+        });
+
+        // Handle the response from the server
+        const data = await response.json();
+
+        if (response.ok) {
+          // Store the user's data in localStorage
+          alert("You're appointment is CONFIRMED for "+date)
+          // Redirect to the dashboard
+          window.location.href = "../custdash/index.html"; // Adjust the path to your dashboard
+        } else {
+          alert(data.message); // "Invalid username or password"
+        }
+      } catch (error) {
+        console.error("Error during login:", error);
+        alert(
+          "An error occurred while trying to log in. Please try again later."
+        );
+      }
+    }
+
+    document.getElementById("submit_btn").addEventListener("click", schedule);
+
+    function getLoggedInUser() {
+      // Retrieve user data from localStorage
+      const user = JSON.parse(localStorage.getItem("userid"));
+      console.log(user);
+      if (user) {
+        // Update the element with the user's name
+        document.getElementById("customer_id").value = user;
+      } else {
+        console.log("No user is logged in.");
+      }
+    }
+
+    getLoggedInUser();
+
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      const mechanicSelect = document.getElementById("mechanic_input");
+
+      try {
+        const response = await fetch("http://localhost:3000/users/mechanicslist");
+        if (!response.ok) {
+          throw new Error("Failed to fetch mechanics");
+        }
+
+        const mechanics = await response.json();
+
+        mechanics.forEach(mechanic => {
+          const option = document.createElement("option");
+          option.value = mechanic.id;
+          option.textContent = mechanic.name;
+          mechanicSelect.appendChild(option);
+        });
+      } catch (error) {
+        console.error("Error fetching mechanics:", error);
+      }
+    });
+  </script>
 </html>
