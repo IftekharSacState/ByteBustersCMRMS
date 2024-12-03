@@ -3,10 +3,161 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Taskmanager</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" />
+    <title>Taskmanager</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap"
+    />
     <link rel="stylesheet" href="index.css" />
+    <style>
+      #container_iftekhar {
+        height: 700px;
+        width: 1200px;
+        background-color: white;
+        z-index: 1000000000;
+        position: absolute;
+        top: 350px;
+        left: 220px;
+        padding: 20px;
+      }
+
+      /* Dashboard Container */
+      .dashboard-container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Header Section */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #4caf50;
+        color: white;
+        border-radius: 8px 8px 0 0;
+      }
+
+      header h1 {
+        font-size: 2em;
+        margin: 0;
+      }
+
+      .logout-container {
+        display: flex;
+      }
+
+      .logout-btn {
+        background-color: #f44336;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+      }
+
+      .logout-btn:hover {
+        background-color: #d32f2f;
+      }
+
+      /* Search Bar */
+      .search-container {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      #searchBar {
+        width: 80%;
+        padding: 10px;
+        font-size: 1em;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        margin: 0 auto;
+        display: block;
+      }
+
+      /* Table Styles */
+      table.service-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        background-color: #ffffff;
+      }
+
+      table.service-table th,
+      table.service-table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      table.service-table th {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      table.service-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      table.service-table tr:hover {
+        background-color: #ddd;
+      }
+
+      table.service-table td button {
+        background-color: #4caf50;
+        color: white;
+        padding: 6px 12px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      table.service-table td button:hover {
+        background-color: #45a049;
+      }
+
+      table#completedAppointments button {
+        display: none;
+      }
+
+      /* Appointment Title */
+      h2 {
+        font-size: 1.8em;
+        color: #333;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      /* Mobile Responsiveness */
+      @media (max-width: 768px) {
+        .dashboard-container {
+          padding: 15px;
+        }
+
+        header h1 {
+          font-size: 1.5em;
+        }
+
+        #searchBar {
+          width: 100%;
+        }
+
+        .service-table td button {
+          width: 100%;
+          padding: 10px;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="main-container">
@@ -37,30 +188,29 @@
           <div class="flex-column-f">
             <div class="crmrs"></div>
             <a href="../employeehoursnperf/index.html">
-            <div class="frame">
-              <div class="vector"></div>
-              <div class="vector-e"></div>
-              <div class="vector-f"></div>
-            </div>
+              <div class="frame">
+                <div class="vector"></div>
+                <div class="vector-e"></div>
+                <div class="vector-f"></div>
+              </div>
             </a>
             <div class="frame-10">
               <a href="../projects/index.html">
-              <div class="group">
-                <div class="vector-11"></div>
-                <div class="vector-12"></div>
-              </div>
+                <div class="group">
+                  <div class="vector-11"></div>
+                  <div class="vector-12"></div>
+                </div>
               </a>
               <div class="vector-13"></div>
               <div class="vector-14"></div>
             </div>
             <div class="frame-15">
               <a href="../team/index.html">
-              <div class="group-16"></div>
+                <div class="group-16"></div>
               </a>
             </div>
             <a href="../calendar/index.html">
-            <div class="frame-17"></div>
-
+              <div class="frame-17"></div>
             </a>
           </div>
           <span class="dashboard">Dashboard</span>
@@ -129,63 +279,165 @@
             >Total<br />Attendance Progress</span
           >
         </div>
-        <div class="line-38"></div>
-        <span class="date">Date</span><span class="project">Project</span
-        ><span class="tech">Tech</span
-        ><span class="working-hours">Working Hours</span
-        ><span class="break">Break</span><span class="status">Status</span>
-        <div class="rectangle-39"></div>
-        <button class="button-3a">
-          <span class="tasks-done">Tasks Done</span></button
-        ><span class="nov-04-nov-2024">04/Nov/2024</span
-        ><span class="erp-management">ERP Management</span
-        ><span class="team-a">Team A</span><span class="h">08:15h</span
-        ><span class="h-3b">1:56h</span>
-        <div class="rectangle-3c"></div>
-        <button class="button-3d">
-          <span class="tasks-done-3e">Tasks Done</span>
-        </button>
-        <div class="group-3f"></div>
-        <span class="may-04-may-2024">04/May/2024</span
-        ><span class="erp-management-40">ERP Management</span
-        ><span class="team-a-41">Team A</span><span class="h-42">08:36h</span
-        ><span class="h-43">1:47h</span>
-        <div class="rectangle-44"></div>
-        <button class="button-45">
-          <span class="tasks-done-46">Tasks Done</span></button
-        ><span class="may-02may-2021">02May/2021</span
-        ><span class="erp-management-47">ERP Management</span
-        ><span class="team-a-48">Team A</span><span class="h-49">08:05h</span
-        ><span class="h-4a">1:51h</span>
+
         <div class="rectangle-4b">
           <span class="profile">Profile</span>
           <div class="frame-4c"><div class="group-4d"></div></div>
         </div>
-        <div class="rectangle-4e"></div>
-        <button class="rectangle-btn">
-          <span class="tasks-done-4f">Tasks Done</span></button
-        ><span class="may-date">01/May/2021</span
-        ><span class="bug-discover">BugDiscover</span
-        ><span class="team-c">Team C</span><span class="time-08-42">08:42h</span
-        ><span class="time-1-48">1:48h</span>
-        <div class="rectangle-50"></div>
-        <button class="rectangle-btn-51">
-          <span class="in-process">In Process</span></button
-        ><span class="apr-date">29/Apr/2021</span
-        ><span class="bug-discover-52">BugDiscover</span
-        ><span class="team-c-53">Team C</span
-        ><span class="time-08-28">08:28h</span
-        ><span class="time-1-43">1:43h</span>
-        <div class="rectangle-54"></div>
-        <div class="rectangle-55">
-          <button class="tasks-done-56">Tasks Done</button>
-        </div>
-        <span class="apr-date-57">28/Apr/2021</span
-        ><span class="erp-management-58">ERP Management</span
-        ><span class="team-a-59">Team A</span
-        ><span class="time-08-06">08:06h</span
-        ><span class="time-1-50">1:50h</span>
       </div>
     </div>
+    <div id="container_iftekhar">
+      <input type="hidden" id="customer_id" />
+
+      <div class="appointments-container">
+        <div class="search-container">
+          <input
+            type="text"
+            id="searchBar"
+            placeholder="Search by customer name or service..."
+          />
+        </div>
+
+        <!-- Upcoming Appointments -->
+        <h2>Upcoming Appointments</h2>
+        <table class="service-table" id="upcomingAppointments">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Customer</th>
+              <th>Service</th>
+              <th>Mileage</th>
+              <th>Location</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Dynamic content will be injected here -->
+          </tbody>
+        </table>
+
+        <!-- Completed Appointments -->
+        <h2>Completed Appointments</h2>
+        <table class="service-table" id="completedAppointments">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Customer</th>
+              <th>Service</th>
+              <th>Mileage</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Dynamic content will be injected here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script>
+      // Retrieve mechanic ID from logged-in user (could be stored in localStorage/session)
+      function getLoggedInUser() {
+        // Retrieve user data from localStorage
+        const user = JSON.parse(localStorage.getItem("user"));
+        const userid = JSON.parse(localStorage.getItem("userid"));
+
+        console.log(userid);
+        if (user) {
+          // Update the element with the user's name
+          document.getElementById("customer_id").value = userid;
+
+          console.log(`Logged in as: ${user.username}`);
+        } else {
+          console.log("No user is logged in.");
+        }
+      }
+
+      getLoggedInUser();
+
+      // Fetch appointments for the logged-in mechanic
+      function fetchAppointments() {
+        const mechanicId = document.getElementById("customer_id").value;
+
+        if (!mechanicId) {
+          console.log("Mechanic ID is missing.");
+          return;
+        }
+
+        // Make a GET request to fetch appointments for the logged-in mechanic
+        fetch(
+          `http://localhost:3000/appointments/mechanic?mechanicId=${mechanicId}`
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            populateAppointments("upcomingAppointments", data.upcoming);
+            populateAppointments("completedAppointments", data.completed);
+          })
+          .catch((error) =>
+            console.error("Error fetching appointments:", error)
+          );
+      }
+
+      // Populate the table with appointment data
+      function populateAppointments(tableId, appointments) {
+        const table = document.getElementById(tableId);
+        const tbody = table.querySelector("tbody");
+        tbody.innerHTML = ""; // Clear the table
+
+        appointments.forEach((appointment) => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${appointment.date}</td>
+            <td>${appointment.customerId}</td>
+            <td>${appointment.serviceType}</td>
+            <td>Not Calculated</td>
+            <td>Main Branch</td>
+            <td><button onclick="markAsCompleted('${appointment.id}')">Mark as Completed</button></td>
+          `;
+          tbody.appendChild(row);
+        });
+      }
+
+      // Mark an appointment as completed
+      function markAsCompleted(appointmentId) {
+        confirm("Are you sure you want to make this task as completed?");
+        fetch(`http://localhost:3000/appointments/complete/${appointmentId}`, {
+          method: "POST",
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            alert("Appointment marked as completed!");
+            alert("Sending the customer a notifciation...");
+            fetchAppointments(); // Re-fetch appointments after updating status
+          })
+          .catch((error) =>
+            console.error("Error marking appointment as completed:", error)
+          );
+      }
+
+      // Search functionality for filtering appointments by customer or service
+      document
+        .getElementById("searchBar")
+        .addEventListener("input", function () {
+          const searchQuery = this.value.toLowerCase();
+          const rows = document.querySelectorAll("table tbody tr");
+
+          rows.forEach((row) => {
+            const customerName = row.cells[1].textContent.toLowerCase();
+            const service = row.cells[2].textContent.toLowerCase();
+
+            if (
+              customerName.includes(searchQuery) ||
+              service.includes(searchQuery)
+            ) {
+              row.style.display = "";
+            } else {
+              row.style.display = "none";
+            }
+          });
+        });
+
+      // Fetch and display appointments when the page loads
+      window.onload = fetchAppointments;
+    </script>
   </body>
 </html>
