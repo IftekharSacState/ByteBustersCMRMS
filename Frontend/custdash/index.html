@@ -21,32 +21,100 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap"
     />
     <link rel="stylesheet" href="index.css" />
+
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.dashboard {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 1.6em;
+}
+
+.service-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+}
+
+.service-table th, .service-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.service-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.service-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.service-table tr:hover {
+    background-color: #ddd;
+}
+
+      #container_iftekhar {
+        width: 900px;
+        background-color: white;
+        margin-top: 1000px;
+        padding: 20px;
+        margin-left: 500px;
+      }
+
+      #container_iftekhar input, #container_iftekhar select, #container_iftekhar label {
+        display: block;
+      }
+
+      input, select, button {
+        margin-bottom: 20px;
+      }
+      </style>
   </head>
   <body>
     <div class="main-container">
       <div class="rectangle">
         <div class="crmrs"></div>
         <div class="flex-column-bb">
+          <a href="../login/index.html">
           <button class="frame-button">
             <div class="frame"><span class="logout">Logout</span></div>
           </button>
-          <div class="frame-1">
-            <span class="upcoming-services">UPCOMING SERVICE(S)</span>
-          </div>
-          <span class="previous-services">PREVIOUS SERVICE(S)</span>
+          </a>
         </div>
       </div>
       <div class="header">
         <div class="navigation-pill-list"></div>
+        <a href="../profilesettingchatbox/index.html">
         <button class="header-auth">
           <div class="button"><span class="profile">Profile</span></div>
+        </a>
         </button>
       </div>
       <div class="hello-customer">
         <span class="hello">HELLO, </span
         ><span class="customer" id="customer_name">Customer<br /></span>
       </div>
+      <a href="../Homepage/index.html">
       <button class="navigation-pill"><span class="title">Home</span></button>
+      </a>
       <div class="image"></div>
       <div class="frame-2">
         <span class="vehicle-health-report">Vehicle Health Report</span>
@@ -101,91 +169,98 @@
               <span class="miles">325000<br />Miles</span>
             </div>
           </div>
+          <a href="../appointment/index.html">
           <button class="schedule-service-12">
             <div class="button-13">
               <span class="register">Schedule Service</span>
-            </div></button
-          ><button class="health-report">
+            </div>
+            </button>
+          </a>
+          <a href="../servicehistory/index.html">
+          <button class="health-report">
             <div class="button-14">
               <span class="view-full-health-report"
                 >View Full Health Report</span
               >
             </div>
           </button>
+        </a>
+        
         </div>
+        
       </div>
-      <div class="upcoming-services-frame">
-        <div class="upcoming-service-frame">
-          <div class="date"><span class="date-15">Date</span></div>
-          <span class="mileage">Mileage</span
-          ><span class="location">Location</span
-          ><span class="service">Service</span>
-        </div>
-        <div class="flex-row-ce">
-          <div class="date-16"><span class="date-17">11/5/2020</span></div>
-          <span class="somewhere-anywhere">Somewhere,anywhere</span
-          ><span class="oil-change-rotate-tires-wiper-fluid"
-            >Oil change, Rotate Tires, Wiper Fluid</span
-          ><span class="mileage-18">324268</span>
-        </div>
+      <div id="container_iftekhar">
+        <div class="dashboard">
+          <input type="hidden" id="customer_id" />
+          <h2>Upcoming Service(s)</h2>
+          <table class="service-table" id="upcomingTable">
+            <thead>
+                  <tr>
+                      <th>Date</th>
+                      <th>Service</th>
+                      <th>Mileage</th>
+                      <th>Location</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>11/5/2020</td>
+                      <td>Oil change, Rotate Tires, Wiper Fluid</td>
+                      <td>324268</td>
+                      <td>Somewhere, anywhere</td>
+                  </tr>
+              </tbody>
+          </table>
+  
+          <h2>Previous Service(s)</h2>
+          <table class="service-table" id="previousTable">
+            <thead>
+                  <tr>
+                      <th>Date</th>
+                      <th>Service</th>
+                      <th>Mileage</th>
+                      <th>Location</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>10/25/2020</td>
+                      <td>Check for concern</td>
+                      <td>310246</td>
+                      <td>Somewhere, anywhere</td>
+                  </tr>
+                  <tr>
+                      <td>10/7/2020</td>
+                      <td>Engine Failure</td>
+                      <td>304250</td>
+                      <td>Location</td>
+                  </tr>
+                  <tr>
+                      <td>9/5/2020</td>
+                      <td>I have no idea</td>
+                      <td>304249</td>
+                      <td>Somewhere</td>
+                  </tr>
+              </tbody>
+          </table>
       </div>
-      <div class="previous-service-frame">
-        <div class="previous-service-frame-19">
-          <div class="date-1a"><span class="date-1b">Date</span></div>
-          <span class="mileage-1c">Mileage</span
-          ><span class="location-1d">Location</span
-          ><span class="service-1e">Service</span>
-        </div>
-        <div class="flex-row-a">
-          <div class="date-1f"><span class="date-20">10/25/2020</span></div>
-          <span class="somewhere-anywhere-21">Somewhere,anywhere</span
-          ><span class="check-for-concern">Check for concern</span
-          ><span class="mileage-22">310246</span>
-        </div>
-      </div>
-      <div class="previous-service-frame-23">
-        <div class="date-24"><span class="date-25">10/7/2020</span></div>
-        <span class="mileage-26">304250</span
-        ><span class="location-27">Location</span
-        ><span class="engine-failure">Engine Failure</span>
-      </div>
-      <div class="previous-service-frame-28">
-        <div class="date-29"><span class="date-2a">9/5/2020</span></div>
-        <span class="mileage-2b">304249</span
-        ><span class="somewhere">Somewhere</span
-        ><span class="no-idea">I have no idea</span>
-      </div>
-      <div class="rectangle-2c">
-        <div class="flex-row">
-          <div class="guarantee"></div>
-          <div class="certified"></div>
-          <span class="best-prices">Best Prices</span>
-          <div class="best-prices-2d"></div>
-          <span class="qualified-trained"
-            >All of our mechanics are qualified and are regularly trained.</span
-          ><span class="guarantee-period"
-            >All of our repairs and services come with a guarantee period</span
-          ><span class="affordable-rates"
-            >All mechanical repairs and services are available at affordable
-            rates
-          </span>
-        </div>
-        <div class="flex-row-ba">
-          <span class="text-32">100% Guarantee</span
-          ><span class="certified-mechanics">Certified Mechanics</span>
-        </div>
       </div>
     </div>
+
+    
   </body>
 
   <script>
     function getLoggedInUser() {
       // Retrieve user data from localStorage
       const user = JSON.parse(localStorage.getItem("user"));
-      console.log(user);
+      const userid = JSON.parse(localStorage.getItem("userid"));
+
+      console.log(userid);
       if (user) {
         // Update the element with the user's name
         document.getElementById("customer_name").innerText = user.username;
+        document.getElementById("customer_id").value = userid;
 
         console.log(`Logged in as: ${user.username}`);
       } else {
@@ -193,6 +268,54 @@
       }
     }
 
+
     getLoggedInUser();
+
+      // Function to fetch appointments based on the logged-in customer's customerId
+      function fetchAppointments() {
+        const customerId = document.getElementById("customer_id").value;
+        if (!customerId) {
+          console.log("Customer ID is missing.");
+          return;
+        }
+
+        // Make a GET request to fetch appointments for the logged-in customer
+        fetch(`http://localhost:3000/appointments?customerId=${customerId}`)
+          .then((response) => response.json())
+          .then((data) => {
+            // Check the structure of the data for debugging
+            console.log(data);
+            
+            // Populate both tables with the received data
+            populateTable('upcomingTable', data.upcoming);
+            populateTable('previousTable', data.previous);
+          })
+          .catch((error) => {
+            console.error("Error fetching appointments:", error);
+          });
+      }
+
+      // Function to populate a table with appointment data
+      function populateTable(tableId, appointments) {
+        const table = document.getElementById(tableId);
+        const tbody = table.querySelector('tbody');
+        tbody.innerHTML = '';  // Clear existing rows
+
+        // Loop through each appointment and create a row
+        appointments.forEach((appointment) => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${appointment.date}</td>
+            <td>${appointment.serviceType}</td>
+            <td>Not calculated</td>
+            <td>Main Branch</td>
+          `;
+          tbody.appendChild(row);  // Add the row to the table
+        });
+      }
+
+      // Call fetchAppointments to populate the tables when the page loads
+      window.onload = fetchAppointments;
+    
   </script>
 </html>

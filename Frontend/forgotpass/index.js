@@ -5,10 +5,36 @@ document.addEventListener("DOMContentLoaded", () => {
     const contactButton = document.querySelector(".contact");
     const servicesButton = document.querySelector(".services-plus");
     const aboutButton = document.querySelector(".about");
+    const emailInput = document.getElementById("email");
   
-    emailMeButton.addEventListener("click", () => {
-      window.location.href = "../forgot2/index.html";
-      // Add your sign-in logic here
+    emailMeButton.addEventListener("click", async () => {
+      confirm("Are you sure you want to reset your password?");
+      try {
+        if (emailInput.value === "") {
+          throw new Error("Please enter your email address");
+        }
+
+        // Check if email exists in the database
+        const response = await fetch("http://localhost:3000/users/forgotpassword", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email: emailInput.value }),
+        })
+
+        console.log(response);
+
+        // Handle response
+        if (response.status === 200) {
+          alert("Your password has been reset to 'password'.");
+          window.location.href = "../login/index.html";
+        } else {
+          alert("Error");
+        }
+      } catch (error) {
+        alert(error);
+      }
     });
   
     homeButton.addEventListener("click", () => {

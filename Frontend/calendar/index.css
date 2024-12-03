@@ -237,8 +237,8 @@ button {
   position: absolute;
   width: 14px;
   height: 84px;
-  top: 24px;
-  left: 124px;
+  top: 57px;
+  left: 137px;
   color: #1e5dbc;
   font-family: Lato, var(--default-font-family);
   font-size: 12px;
@@ -1206,8 +1206,8 @@ button {
   position: absolute;
   width: 14px;
   height: 29px;
-  top: 30px;
-  left: 39px;
+  top: 28px;
+  left: 33px;
   cursor: pointer;
   color: #fefdff;
   font-family: Lato, var(--default-font-family);

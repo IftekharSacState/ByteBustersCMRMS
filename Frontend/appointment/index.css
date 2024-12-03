@@ -2694,7 +2694,7 @@ button {
   position: absolute;
   height: 22px;
   top: 1616px;
-  left: 345px;
+  left: 315px;
   color: #ffffff;
   font-family: Open Sans, var(--default-font-family);
   font-size: 16px;
@@ -2703,17 +2703,12 @@ button {
   text-align: left;
   white-space: nowrap;
   z-index: 206;
+ 
 }
-.vector-5b {
-  position: absolute;
-  width: 1.52%;
-  height: 2.15%;
-  top: 157.81%;
-  left: 21.45%;
-  background: url(./assets/images/122fc27f-32ad-473e-be1a-a3ca7a1baa8a.png)
-    no-repeat center;
-  background-size: 100% 100%;
-  z-index: 209;
+.optional-recommended .optional-icon {
+  width: 30px;  /* Adjust the size of the icon */
+  height: 30px; /* Adjust the size of the icon */
+  margin-right: 10px; /* Add space between the image and the text */
 }
 .navigation-pill:hover,
 .navigation-pill-1:hover,
