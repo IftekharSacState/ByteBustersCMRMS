@@ -68,4 +68,50 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.get("/mechanic", async (req, res) => {
+  const mechanicId = req.query.mechanicId; // Assuming mechanicId is sent as a query parameter
+
+  if (!mechanicId) {
+    return res.status(400).json({ error: "mechanicId is required" });
+  }
+
+  try {
+    // Query for upcoming appointments for the mechanic (status != 'done')
+    const upcomingAppointments = await queryAsync(
+      "SELECT * FROM Appointments WHERE status != 'done' AND mechanicId = ?",
+      [mechanicId]
+    );
+
+    // Query for completed appointments for the mechanic (status = 'done')
+    const completedAppointments = await queryAsync(
+      "SELECT * FROM Appointments WHERE status = 'done' AND mechanicId = ?",
+      [mechanicId]
+    );
+
+    // Respond with both upcoming and completed appointments
+    res.json({
+      upcoming: upcomingAppointments,
+      completed: completedAppointments,
+    });
+  } catch (err) {
+    console.error("Database error:", err.message);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+// Route to mark an appointment as completed
+router.post("/complete/:appointmentId", async (req, res) => {
+  const appointmentId = req.params.appointmentId;
+  try {
+    // Update the appointment status to 'done'
+    await queryAsync("UPDATE Appointments SET status = 'done' WHERE id = ?", [
+      appointmentId,
+    ]);
+    res.json({ message: "Appointment marked as completed" });
+  } catch (err) {
+    console.error("Database error:", err.message);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
 module.exports = router;
