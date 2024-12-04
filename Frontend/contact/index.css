@@ -51,17 +51,7 @@ button {
   background-size: cover;
   z-index: 70;
 }
-.crm-rs-copy {
-  position: absolute;
-  width: 103px;
-  height: 96px;
-  top: 22px;
-  left: 524px;
-  background: url(./assets/images/8131fde8a38c61d67b151d6fe87d951ba69be2ae.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 69;
-}
+
 .navigation-pill {
   display: flex;
   align-items: center;
@@ -106,7 +96,7 @@ button {
   width: 98px;
   height: 39px;
   top: 42px;
-  left: 1261px;
+  left: 688px;
   padding: 8px 8px 8px 8px;
   cursor: pointer;
   background: #ffffff;
@@ -140,7 +130,7 @@ button {
   width: 98px;
   height: 39px;
   top: 42px;
-  left: 688px;
+  left: 1261px;
   padding: 8px 8px 8px 8px;
   cursor: pointer;
   background: #007aff;

@@ -12,6 +12,8 @@
 .main-container,
 .main-container * {
   box-sizing: border-box;
+  width: var(--container-width);
+  height: var(--container-height);
 }
 
 input,
@@ -23,17 +25,21 @@ button {
 
 .main-container {
   position: relative;
-  width: 1440px;
-  height: 1024px;
+  width: 2500px;
+  height: 1250px;
+  display: flex; /* Example layout adjustment */
+  flex-wrap: wrap;
+  justify-content: center; /* Adjusts all children at once */
   margin: 0 auto;
   background: #ffffff;
   overflow: hidden;
+
 }
 .rectangle {
   position: relative;
-  width: 1534px;
+  width: 2500px;
   height: 149px;
-  margin: 875px 0 0 -2px;
+  margin: 1000px 0 0 -2px;
   background: #1e5dbc;
   z-index: 67;
 }
@@ -188,8 +194,8 @@ button {
 }
 .frame {
   position: absolute;
-  width: 1440px;
-  height: 1024px;
+  width: 2500px;
+  height: 1250px;
   top: 0;
   left: 0;
   background: rgba(30, 93, 188, 0.1);
@@ -213,36 +219,16 @@ button {
   background-size: cover;
   z-index: 81;
 }
-.rectangle-2 {
-  position: absolute;
-  width: 462px;
-  height: 1024px;
-  top: 0;
-  left: 0;
-  background: url(./assets/images/04f6e525-ee49-4a13-a0d5-ba140a5a20a0.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 12;
-}
+
 .flex-column-d {
   position: absolute;
-  width: 1194px;
-  height: 554px;
+  width: 1800px;
+  height: 900px;
   top: 23px;
   left: 166px;
   z-index: 80;
 }
-.crmrs-copy {
-  position: absolute;
-  width: 103px;
-  height: 96px;
-  top: 0;
-  left: 359px;
-  background: url(./assets/images/8131fde8a38c61d67b151d6fe87d951ba69be2ae.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 80;
-}
+
 .regroup {
   position: absolute;
   width: 85px;
@@ -293,7 +279,7 @@ button {
   width: 671px;
   height: 39px;
   top: 20px;
-  left: 523px;
+  left: 100px;
   z-index: 1;
   border-radius: 8px;
 }
@@ -341,7 +327,7 @@ button {
   width: 98px;
   height: 39px;
   top: 0;
-  left: 573px;
+  left: 0;
   padding: 8px 8px 8px 8px;
   cursor: pointer;
   background: #ffffff;
@@ -375,7 +361,7 @@ button {
   width: 98px;
   height: 39px;
   top: 0;
-  left: 0;
+  left: 573px;
   padding: 8px 8px 8px 8px;
   cursor: pointer;
   background: #ffffff;
@@ -412,7 +398,7 @@ button {
   left: 146px;
   padding: 8px 8px 8px 8px;
   cursor: pointer;
-  background: #007aff;
+  background: #ffffff;
   border: none;
   z-index: 8;
   border-radius: 8px;
