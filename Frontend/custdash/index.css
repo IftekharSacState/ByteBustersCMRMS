@@ -12,6 +12,7 @@
 .main-container,
 .main-container * {
   box-sizing: border-box;
+
 }
 
 input,
@@ -23,8 +24,8 @@ button {
 
 .main-container {
   position: relative;
-  width: 1440px;
-  height: 1024px;
+  width: 2550px;
+  height: 1250px;
   margin: 0 auto;
   background: rgba(30, 93, 188, 0.1);
   overflow: auto;
@@ -32,9 +33,9 @@ button {
 .rectangle {
   position: absolute;
   width: 462px;
-  height: 1578px;
+  height: 1600px;
   top: -4px;
-  left: 0;
+  left: 1800;
   background: rgba(30, 93, 188, 0.1);
 }
 .crmrs {
@@ -64,6 +65,7 @@ button {
   gap: 10px;
   position: relative;
   width: 98px;
+  left: 1700px;
   height: 39px;
   margin: 0 0 0 0;
   padding: 20px 35px 20px 35px;
@@ -83,7 +85,7 @@ button {
   gap: 10px;
   position: relative;
   width: 145px;
-  z-index: 62;
+  z-index: 59;
 }
 .logout {
   flex-grow: 1;
@@ -91,6 +93,7 @@ button {
   flex-basis: auto;
   position: relative;
   min-width: 0;
+  left: 0px;
   height: 24px;
   color: #ffffff;
   font-family: Open Sans, var(--default-font-family);
@@ -147,7 +150,7 @@ button {
   flex-wrap: wrap;
   gap: 24px;
   position: absolute;
-  width: 1440px;
+  width: 2530px;
   height: 96px;
   top: 0;
   left: 0;
@@ -259,7 +262,7 @@ button {
   width: 98px;
   height: 39px;
   top: 32px;
-  left: 1095px;
+  left: 200px;
   padding: 8px 8px 8px 8px;
   cursor: pointer;
   background: #ffffff;
@@ -285,9 +288,9 @@ button {
 }
 .image {
   position: absolute;
-  width: 1440px;
-  height: 331px;
-  top: 96px;
+  width: 2530px;
+  height: 500px;
+  top: 100px;
   left: 0;
   background: url(./assets/images/9529cccfa1c2ba2cc6618e57bee7112da36f98a6.png)
     no-repeat center;
@@ -298,8 +301,8 @@ button {
   position: absolute;
   width: 1200px;
   height: 524px;
-  top: 359px;
-  left: 100px;
+  top: 450px;
+  left: 700px;
   font-size: 0px;
   z-index: 64;
   overflow: hidden;
