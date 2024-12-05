@@ -150,13 +150,14 @@ button {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
-  height: 16px;
+  height: 27px;
   color: #1e1e1e;
   font-family: Inter, var(--default-font-family);
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
   text-align: left;
+
   white-space: nowrap;
   z-index: 7;
 }
