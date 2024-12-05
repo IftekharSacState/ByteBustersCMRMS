@@ -23,15 +23,15 @@ button {
 
 .main-container {
   position: relative;
-  width: 1445px;
-  height: 1024px;
+  width: 2550px;
+  height: 1250px;
   margin: 0 auto;
   background: rgba(30, 93, 188, 0.1);
   overflow: auto;
 }
 .rectangle {
   position: absolute;
-  width: 470px;
+  width: 700px;
   height: 1717px;
   top: -14px;
   left: -3px;
@@ -94,7 +94,7 @@ button {
   width: 98px;
   height: 39px;
   top: 48px;
-  left: 1274px;
+  left: 847px;
   padding: 8px 8px 8px 8px;
   cursor: pointer;
   background: #ffffff;
@@ -128,7 +128,7 @@ button {
   width: 98px;
   height: 39px;
   top: 48px;
-  left: 847px;
+  left: 1274px;
   padding: 8px 8px 8px 8px;
   cursor: pointer;
   background: #ffffff;
@@ -190,7 +190,7 @@ button {
   position: absolute;
   width: 393px;
   height: 307px;
-  top: 82px;
+  top: 130px;
   left: 47px;
   background: #ffffff;
   z-index: 66;
@@ -1946,7 +1946,7 @@ button {
   position: absolute;
   width: 387.931px;
   height: 330px;
-  top: 412px;
+  top: 450px;
   left: 47px;
   background: #ffffff;
   z-index: 75;
