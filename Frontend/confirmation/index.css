@@ -23,8 +23,8 @@ button {
 
 .main-container {
   position: relative;
-  width: 1440px;
-  height: 1024px;
+  width: 2550px;
+  height: 1250px;
   margin: 0 auto;
   background: rgba(30, 93, 188, 0.1);
   border: 1px solid #000000;
@@ -34,7 +34,7 @@ button {
 .rectangle {
   position: absolute;
   width: 441px;
-  height: 1024px;
+  height: 1250px;
   top: -1px;
   left: -1px;
   background: #1e5dbc;
@@ -51,17 +51,7 @@ button {
   background-size: cover;
   z-index: 5;
 }
-.crmrs-copy {
-  position: absolute;
-  width: 103px;
-  height: 96px;
-  top: 22px;
-  left: 524px;
-  background: url(./assets/images/8131fde8a38c61d67b151d6fe87d951ba69be2ae.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 4;
-}
+
 .navigation-pill {
   display: flex;
   align-items: center;
@@ -106,7 +96,7 @@ button {
   width: 98px;
   height: 39px;
   top: 42px;
-  left: 1261px;
+  left: 688px;
   padding: 8px 8px 8px 8px;
   cursor: pointer;
   background: #ffffff;
@@ -140,7 +130,7 @@ button {
   width: 98px;
   height: 39px;
   top: 42px;
-  left: 688px;
+  left: 1261px;
   padding: 8px 8px 8px 8px;
   cursor: pointer;
   background: #ffffff;
@@ -237,7 +227,7 @@ button {
   width: 882px;
   height: 66px;
   top: 424px;
-  left: 557px;
+  left: 900px;
   font-family: Inter, var(--default-font-family);
   font-size: 40px;
   font-weight: 400;
