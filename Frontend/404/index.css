@@ -23,8 +23,8 @@ button {
 
 .main-container {
   position: relative;
-  width: 1440px;
-  height: 1024px;
+  width: 2550px;
+  height: 1250px;
   margin: 0 auto;
   background: rgba(30, 93, 188, 0.1);
   border: 1px solid #000000;
@@ -33,8 +33,8 @@ button {
 }
 .rectangle {
   /*position: absolute;*/
-  width: 441px;
-  height: 1024px;
+  width: 800px;
+  height: 1250px;
   top: -1px;
   left: -1px;
   background: url(./assets/images/8c0c19c2-9b50-4a4c-95d8-00f83d75db2f.png)
@@ -53,17 +53,7 @@ button {
   background-size: cover;
   z-index: 10;
 }
-.crmrs-1 {
-  position: absolute;
-  width: 110px;
-  height: 98px;
-  top: 22px;
-  left: 524px;
-  background: url(./assets/images/49d0a19142f8f4e180831d9a34d60ccc23427556.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 9;
-}
+
 .frame {
   display: flex;
   align-items: center;
@@ -126,7 +116,7 @@ button {
   width: 996px;
   height: 173px;
   top: 319px;
-  left: 236px;
+  left: 900px;
   color: #f5f5f5;
   font-family: Inter, var(--default-font-family);
   font-size: 48px;
@@ -146,7 +136,7 @@ button {
   position: absolute;
   width: 142px;
   height: 30px;
-  top: 496px;
+  top: 36.5px;
   left: 648px;
   padding: 8px 8px 8px 8px;
   cursor: pointer;
@@ -175,7 +165,7 @@ button {
   width: 640px;
   height: 384px;
   top: 582px;
-  left: 399px;
+  left: 900px;
   background: url(./assets/images/f2c57858535ac31f9e88c960c735059c71eed0d8.png)
     no-repeat center;
   background-size: cover;
