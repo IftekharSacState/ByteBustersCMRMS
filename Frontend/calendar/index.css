@@ -23,8 +23,8 @@ button {
 
 .main-container {
   position: relative;
-  width: 1692px;
-  height: 1024px;
+  width: 2550px;
+  height: 1250px;
   margin: 0 auto;
   background: rgba(30, 93, 188, 0.1);
   overflow: hidden;
@@ -40,7 +40,7 @@ button {
 .rectangle {
   position: absolute;
   width: 144px;
-  height: 1024px;
+  height: 1250px;
   top: 0;
   left: 2px;
   background: #1e5dbc;
@@ -1979,16 +1979,7 @@ button {
   background-size: cover;
   z-index: 69;
 }
-.rectangle-66 {
-  position: absolute;
-  width: 1142px;
-  height: 78px;
-  top: 0;
-  left: 0;
-  background: rgba(255, 255, 255, 0.9);
-  z-index: 9;
-  overflow: hidden;
-}
+
 .today-meeting {
   display: flex;
   align-items: flex-start;
@@ -2305,8 +2296,8 @@ button {
   position: absolute;
   width: 6.75%;
   height: 4.11%;
-  top: 9.89%;
-  left: 0;
+  top: 25px;
+  left: 1800px;
   padding: 20px 35px 20px 35px;
   cursor: pointer;
   background: #000000;
